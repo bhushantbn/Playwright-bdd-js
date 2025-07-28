@@ -15,9 +15,9 @@
 <!-- Badges -->
 <div align="center">
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/your-username/your-repo/ci.yml?branch=main&style=for-the-badge)](https://github.com/your-username/your-repo/actions)
-[![License](https://img.shields.io/github/license/your-username/your-repo?style=for-the-badge)](https://github.com/your-username/your-repo/blob/main/LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](http://makeapullrequest.com)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/your-username/your-repo/ci.yml?branch=main&style=for-the-badge)](#)
+[![License](https://img.shields.io/github/license/your-username/your-repo?style=for-the-badge)]#)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](#)
 
 </div>
 
