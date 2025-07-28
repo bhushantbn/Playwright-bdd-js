@@ -1,14 +1,14 @@
 <div align="center">
-  <a href="https://github.com/your-username/your-repo">
+  <a href="#">
     <img src="https://playwright.dev/img/playwright-logo.svg" alt="Logo" width="120" height="120">
   </a>
   <h1 align="center">Playwright BDD JavaScript Boilerplate</h1>
   <p align="center">
     A robust boilerplate for building scalable and maintainable E2E tests with Playwright and Cucumber.js.
     <br />
-    <a href="https://github.com/your-username/your-repo/issues">Report Bug</a>
+    <a href=#">Report Bug</a>
     ·
-    <a href="https://github.com/your-username/your-repo/issues">Request Feature</a>
+    <a href="#">Request Feature</a>
   </p>
 </div>
 
