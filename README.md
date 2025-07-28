@@ -1,73 +1,35 @@
-<div align="center">
-  <a href="#">
-    <img src="https://playwright.dev/img/playwright-logo.svg" alt="Logo" width="120" height="120">
-  </a>
-  <h1 align="center">Playwright BDD JavaScript Boilerplate</h1>
-  <p align="center">
-    A robust boilerplate for building scalable and maintainable E2E tests with Playwright and Cucumber.js.
-    <br />
-    <a href=#">Report Bug</a>
-    ·
-    <a href="#">Request Feature</a>
-  </p>
-</div>
+# Playwright BDD JavaScript Project
 
-<!-- Badges -->
-<div align="center">
-
-[![Build Status](https://img.shields.io/github/actions/workflow/status/your-username/your-repo/ci.yml?branch=main&style=for-the-badge)](#)
-[![License](https://img.shields.io/github/license/your-username/your-repo?style=for-the-badge)]#)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](#)
-
-</div>
-
----
+This project is a boilerplate for setting up end-to-end testing using Playwright with Cucumber.js for Behavior-Driven Development (BDD) in JavaScript.
 
 ## 📖 Table of Contents
 
-- [💻 About The Project](#-about-the-project)
-  - [✨ Features](#-features)
-  - [🛠️ Tech Stack](#️-tech-stack)
-- [🚀 Getting Started](#-getting-started)
-  - [📋 Prerequisites](#-prerequisites)
-  - [⚙️ Installation](#️-installation)
-- [🏃‍♂️ Running Tests](#️-running-tests)
-  - [Executing All Scenarios](#executing-all-scenarios)
-  - [Executing a Specific Feature File](#executing-a-specific-feature-file)
-  - [Executing with Tags](#executing-with-tags)
-- [📊 Reporting](#-reporting)
-  - [Test Execution & Report Generation Flow](#test-execution--report-generation-flow)
-  - [Viewing Reports](#viewing-reports)
-- [📁 Project Structure](#-project-structure)
-- [🤝 Contributing](#-contributing)
-- [📝 License](#-license)
+- [Features](#-features)
+- [Prerequisites](#-prerequisites)
+- [Getting Started](#-getting-started)
+  - [Installation](#installation)
+- [Running Tests](#-running-tests)
+- [Viewing Reports](#-viewing-reports)
+- [Project Structure](#-project-structure)
 
 ---
 
-## 💻 About The Project
+## ✨ Features
 
-This project provides a comprehensive boilerplate for setting up end-to-end (E2E) tests using **Playwright** and **Cucumber.js**. It's designed to enable Behavior-Driven Development (BDD) in a JavaScript environment, promoting collaboration between technical and non-technical team members.
+*   **Playwright:** For powerful and reliable end-to-end browser automation.
+*   **Cucumber.js:** Enables BDD by allowing tests to be written in a human-readable Gherkin format (`.feature` files).
+*   **Page Object Model:** A design pattern to create a reusable and maintainable test codebase (Assumed structure).
+*   **Multiple Reporters:** Generates both the standard Playwright HTML report and a detailed Cucumber HTML report.
+*   **Cross-browser:** Leverages Playwright's capability to run tests across Chromium, Firefox, and WebKit.
 
-The structure is built with scalability and maintainability in mind, incorporating best practices like the Page Object Model and Cucumber hooks for setup and teardown.
+---
 
-### ✨ Features
+## 📋 Prerequisites
 
-*   **🎭 Behavior-Driven Development:** Write tests in a human-readable Gherkin syntax.
-*   **⚡ Modern Tooling:** Leverages the power and speed of Playwright for reliable browser automation.
-*   **🏗️ Scalable Architecture:** Organized with the Page Object Model in mind for maintainable test code.
-*   **🪝 Hooks:** Uses Cucumber's `Before` and `After` hooks for managing browser state (`features/helpers/hooks.js`).
-*   **📊 Rich Reporting:** Generates a detailed Cucumber HTML report from a JSON feed.
-*   **🌐 Cross-Browser:** Natively supports Chromium, Firefox, and WebKit.
-*   **🔧 Extensible:** Easy to add custom steps, hooks, and configurations.
+Before you begin, ensure you have the following installed on your system:
 
-### 🛠️ Tech Stack
-
-| Technology                                       | Description                               |
-| :----------------------------------------------- | :---------------------------------------- |
-| **Playwright**          | Browser automation library from Microsoft. |
-| **Cucumber.js**          | BDD tool for writing tests in Gherkin.    |
-| **`cucumber-html-reporter`** | Generates beautiful, standalone HTML reports. |
-| **Node.js**               | JavaScript runtime environment.           |
+*   Node.js (v16 or higher is recommended)
+*   npm or yarn
 
 ---
 
@@ -75,43 +37,31 @@ The structure is built with scalability and maintainability in mind, incorporati
 
 Follow these steps to get the project up and running on your local machine.
 
-### 📋 Prerequisites
-
-Ensure you have the following installed on your system:
-*   Node.js (v16 or higher is recommended)
-*   npm or yarn
-
-### ⚙️ Installation
+### Installation
 
 1.  **Clone the repository:**
-    *(Replace `<YOUR_REPOSITORY_URL>` with the actual URL)*
     ```sh
-    git clone <YOUR_REPOSITORY_URL>
+    git clone <your-repository-url>
     cd Playwright-bdd-js
     ```
 
 2.  **Install project dependencies:**
     ```sh
     npm install
-    # or
-    yarn install
     ```
 
 3.  **Install Playwright browsers:**
-    This command downloads the browser binaries required by Playwright.
+    This command downloads the browser binaries for Chromium, Firefox, and WebKit.
     ```sh
     npx playwright install
     ```
 
 ---
 
-## 🏃‍➡️ Running Tests
+## 🏃‍♂️ Running Tests
 
-The tests are executed using the `cucumber-js` CLI, which is wrapped in an `npm` script.
+To execute the BDD tests, run the following command from the root of the project:
 
-### Executing All Scenarios
-
-To execute all BDD tests defined in the `.feature` files, run the following command:
 ```sh
 npm test
 ```
