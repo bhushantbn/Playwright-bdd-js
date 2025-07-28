@@ -1,0 +1,356 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "login-feature;successful-login-with-valid-credentials",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Successful login with valid credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 299180799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "User navigates to the login page",
+            "match": {
+              "location": "features\\steps\\loginsteps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2512374100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "User enters username \"student\" and password \"Password123\"",
+            "match": {
+              "location": "features\\steps\\loginsteps.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 785853700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "User should see the secure area",
+            "match": {
+              "location": "features\\steps\\loginsteps.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 59733899
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 11563799
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-feature;negative-username-test",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Negative username test",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 245865200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "User navigates to the login page",
+            "match": {
+              "location": "features\\steps\\loginsteps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2355984500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "User enters username \"student123\" and password \"Password123\"",
+            "match": {
+              "location": "features\\steps\\loginsteps.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 104765200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "User should see the Invalid username error message",
+            "match": {
+              "location": "features\\steps\\loginsteps.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3380500
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 7240000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-feature;negative-password-test",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "Negative password test",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 258626700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "User navigates to the login page",
+            "match": {
+              "location": "features\\steps\\loginsteps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2492411100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "User enters username \"student\" and password \"Password123$\"",
+            "match": {
+              "location": "features\\steps\\loginsteps.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 96765799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "User should see the Invalid password error message",
+            "match": {
+              "location": "features\\steps\\loginsteps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3092600
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 7430699
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-feature;blank-scenario",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "Blank scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 265979900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 19,
+            "name": "User navigates to the login page",
+            "match": {
+              "location": "features\\steps\\loginsteps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2592794799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "User enters username \" \" and password \" \"",
+            "match": {
+              "location": "features\\steps\\loginsteps.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 106777999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "User should see the Invalid username and password error messages",
+            "match": {
+              "location": "features\\steps\\loginsteps.js:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27843000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 7578000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-feature;logout-user",
+        "keyword": "Scenario",
+        "line": 23,
+        "name": "Logout User",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 357182399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 24,
+            "name": "User navigates to the login page",
+            "match": {
+              "location": "features\\steps\\loginsteps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2209640600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "User enters username \"student\" and password \"Password123\"",
+            "match": {
+              "location": "features\\steps\\loginsteps.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 691160300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "User clicks on the logout button",
+            "match": {
+              "location": "features\\steps\\loginsteps.js:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 124788200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 27,
+            "name": "User should be redirected to the login page",
+            "match": {
+              "location": "features\\steps\\loginsteps.js:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 37821499
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 11076199
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "login-feature",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Login Feature",
+    "tags": [],
+    "uri": "features\\login.feature"
+  }
+]

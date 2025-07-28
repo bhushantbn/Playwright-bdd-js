@@ -1,0 +1,20 @@
+{
+  "name": "playwright-bdd-js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js features/**/*.feature --require features/steps --require features/helpers/hooks.js --format json:test-results/report.json",
+    "report": "node generate-report.js"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^9.0.0",
+    "@playwright/test": "^1.43.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.0",
+    "@babel/preset-env": "^7.28.0",
+    "@babel/register": "^7.27.1",
+    "cucumber-html-reporter": "^6.0.0",
+    "multiple-cucumber-html-reporter": "^3.9.3"
+  }
+}
