@@ -35,7 +35,8 @@ class LoginPage {
   }
 
   async logout() {
-    await this.page.click(this.logoutButton);
+    await this.page.waitForURL("**/shop.php");
+    await this.page.locator(this.logoutButton).click();
   }
   async loginClick() {
     await this.page.click(this.loginButton);
