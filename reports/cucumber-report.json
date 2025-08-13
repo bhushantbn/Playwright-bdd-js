@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 299180799
+              "duration": 287914099
             }
           },
           {
@@ -27,20 +27,20 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2512374100
+              "duration": 512314399
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 5,
-            "name": "User enters username \"student\" and password \"Password123\"",
+            "name": "User enters email \"demo@demo.com\" and password \"demo\"",
             "match": {
-              "location": "features\\steps\\loginsteps.js:15"
+              "location": "features\\steps\\loginsteps.js:13"
             },
             "result": {
               "status": "passed",
-              "duration": 785853700
+              "duration": 190436399
             }
           },
           {
@@ -49,11 +49,11 @@
             "line": 6,
             "name": "User should see the secure area",
             "match": {
-              "location": "features\\steps\\loginsteps.js:22"
+              "location": "features\\steps\\loginsteps.js:26"
             },
             "result": {
               "status": "passed",
-              "duration": 59733899
+              "duration": 235688300
             }
           },
           {
@@ -61,7 +61,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 11563799
+              "duration": 8451699
             }
           }
         ],
@@ -70,17 +70,17 @@
       },
       {
         "description": "",
-        "id": "login-feature;negative-username-test",
+        "id": "login-feature;invalid-email",
         "keyword": "Scenario",
         "line": 8,
-        "name": "Negative username test",
+        "name": "Invalid Email",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 245865200
+              "duration": 245791899
             }
           },
           {
@@ -93,33 +93,33 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2355984500
+              "duration": 634614199
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 10,
-            "name": "User enters username \"student123\" and password \"Password123\"",
+            "name": "User enters email \"demo1@demo.com\" and password \"demo\"",
             "match": {
-              "location": "features\\steps\\loginsteps.js:15"
+              "location": "features\\steps\\loginsteps.js:13"
             },
             "result": {
               "status": "passed",
-              "duration": 104765200
+              "duration": 100998399
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 11,
-            "name": "User should see the Invalid username error message",
+            "name": "User should see the Invalid email error message",
             "match": {
-              "location": "features\\steps\\loginsteps.js:27"
+              "location": "features\\steps\\loginsteps.js:31"
             },
             "result": {
               "status": "passed",
-              "duration": 3380500
+              "duration": 3698700
             }
           },
           {
@@ -127,7 +127,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 7240000
+              "duration": 9112400
             }
           }
         ],
@@ -136,17 +136,17 @@
       },
       {
         "description": "",
-        "id": "login-feature;negative-password-test",
+        "id": "login-feature;invalid-password",
         "keyword": "Scenario",
         "line": 13,
-        "name": "Negative password test",
+        "name": "Invalid password",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 258626700
+              "duration": 332970399
             }
           },
           {
@@ -159,20 +159,20 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2492411100
+              "duration": 505672500
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 15,
-            "name": "User enters username \"student\" and password \"Password123$\"",
+            "name": "User enters email \"demo@demo.com\" and password \"Password123$\"",
             "match": {
-              "location": "features\\steps\\loginsteps.js:15"
+              "location": "features\\steps\\loginsteps.js:13"
             },
             "result": {
               "status": "passed",
-              "duration": 96765799
+              "duration": 90786299
             }
           },
           {
@@ -181,11 +181,11 @@
             "line": 16,
             "name": "User should see the Invalid password error message",
             "match": {
-              "location": "features\\steps\\loginsteps.js:32"
+              "location": "features\\steps\\loginsteps.js:36"
             },
             "result": {
               "status": "passed",
-              "duration": 3092600
+              "duration": 3384600
             }
           },
           {
@@ -193,7 +193,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 7430699
+              "duration": 9415600
             }
           }
         ],
@@ -212,7 +212,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 265979900
+              "duration": 246479300
             }
           },
           {
@@ -225,33 +225,46 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2592794799
+              "duration": 546445500
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 20,
-            "name": "User enters username \" \" and password \" \"",
+            "name": "User enters email \" \" and password \" \"",
             "match": {
-              "location": "features\\steps\\loginsteps.js:15"
+              "location": "features\\steps\\loginsteps.js:13"
             },
             "result": {
               "status": "passed",
-              "duration": 106777999
+              "duration": 101433300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "User clicks on the login button without input email or password",
+            "match": {
+              "location": "features\\steps\\loginsteps.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 46062500
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 21,
-            "name": "User should see the Invalid username and password error messages",
+            "line": 22,
+            "name": "User should see the Invalid email and password error messages",
             "match": {
-              "location": "features\\steps\\loginsteps.js:36"
+              "location": "features\\steps\\loginsteps.js:40"
             },
             "result": {
               "status": "passed",
-              "duration": 27843000
+              "duration": 8999799
             }
           },
           {
@@ -259,7 +272,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 7578000
+              "duration": 5846799
             }
           }
         ],
@@ -270,7 +283,7 @@
         "description": "",
         "id": "login-feature;logout-user",
         "keyword": "Scenario",
-        "line": 23,
+        "line": 24,
         "name": "Logout User",
         "steps": [
           {
@@ -278,59 +291,59 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 357182399
+              "duration": 232251500
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 24,
+            "line": 25,
             "name": "User navigates to the login page",
             "match": {
               "location": "features\\steps\\loginsteps.js:8"
             },
             "result": {
               "status": "passed",
-              "duration": 2209640600
+              "duration": 619557100
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 25,
-            "name": "User enters username \"student\" and password \"Password123\"",
+            "line": 26,
+            "name": "User enters email \"demo@demo.com\" and password \"demo\"",
             "match": {
-              "location": "features\\steps\\loginsteps.js:15"
+              "location": "features\\steps\\loginsteps.js:13"
             },
             "result": {
               "status": "passed",
-              "duration": 691160300
+              "duration": 150535199
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 26,
+            "line": 27,
             "name": "User clicks on the logout button",
             "match": {
-              "location": "features\\steps\\loginsteps.js:43"
+              "location": "features\\steps\\loginsteps.js:47"
             },
             "result": {
               "status": "passed",
-              "duration": 124788200
+              "duration": 216230099
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 27,
+            "line": 28,
             "name": "User should be redirected to the login page",
             "match": {
-              "location": "features\\steps\\loginsteps.js:46"
+              "location": "features\\steps\\loginsteps.js:50"
             },
             "result": {
               "status": "passed",
-              "duration": 37821499
+              "duration": 29225100
             }
           },
           {
@@ -338,7 +351,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 11076199
+              "duration": 8881399
             }
           }
         ],

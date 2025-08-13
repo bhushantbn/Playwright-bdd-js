@@ -1,35 +1,44 @@
 class LoginPage {
   constructor(page) {
     this.page = page;
-    this.usernameInput = "#username";
+    this.emailInput = "#email";
     this.passwordInput = "#password";
-    this.submitButton = "#submit";
-    this.successText = ".post-title"; // update selector if needed
-    this.errorMessage = "#error";
-    this.logoutButton = page.getByRole('link', { name: 'Log out' }) // Confirm selector in DevTools
+    this.loginButton = "#loginBtn";
+    //this.successText = ".post-title"; // update selector if needed
+    this.errorMessage = "#errorMsg";
+    this.logoutButton = "#logoutBtn";
+    this.emailError="#emailerror"; // Confirm selector in DevTools
   }
 
-  async login(username, password) {
-    await this.page.fill(this.usernameInput, username);
+  async login(email, password) {
+    await this.page.fill(this.emailInput, email);
     await this.page.fill(this.passwordInput, password);
-    await this.page.click(this.submitButton);
+    await this.page.click(this.loginButton);
   }
 
-  async getSuccessMessage() {
-    return this.page.textContent(this.successText);
+  async successLogin() {
+    await this.page.waitForURL("**/shop.php");
+    return this.page; // return page object so you can assert on it
   }
-  async getUserNameError() {
+
+  async getEmailError() {
     return this.page.textContent(this.errorMessage);
   }
   async getPasswordError() {
     return this.page.textContent(this.errorMessage);
   }
   async blankScenarioMessage() {
-    await this.page.waitForSelector(this.errorMessage, { state: "visible" });
-    return this.page.textContent(this.errorMessage);
+    const errorLocator = this.page.locator(this.emailError);
+    await errorLocator.waitFor({ state: "visible", timeout: 5000 });
+    const text = await errorLocator.textContent();
+    return text ? text.trim() : "";
   }
+
   async logout() {
-    await this.logoutButton.click();
+    await this.page.click(this.logoutButton);
+  }
+  async loginClick() {
+    await this.page.click(this.loginButton);
   }
 }
 
