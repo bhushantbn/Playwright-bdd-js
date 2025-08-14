@@ -8,8 +8,8 @@ on:
     branches:
       - main
   schedule:
-    - cron: "0 */6 * * *"  # Runs every 6 hours (UTC)
-  workflow_dispatch:        # Allow manual trigger
+    - cron: "0 */6 * * *" # Every 6 hours UTC
+  workflow_dispatch:
 
 jobs:
   test:
@@ -33,9 +33,25 @@ jobs:
       - name: Run Playwright BDD Tests
         run: npm test
 
-      - name: Upload test reports (if any)
+      - name: Generate HTML Report
+        run: node generate-report.js
+
+      - name: Upload HTML Report as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: cucumber-reports
-          path: reports/
-          if-no-files-found: ignore
+          name: cucumber-html-report
+          path: reports/cucumber-report.html
+          if-no-files-found: error
+
+      - name: Send Email with HTML Report Attachment
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.SMTP_SERVER }}
+          server_port: ${{ secrets.SMTP_PORT }}
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.SMTP_PASSWORD }}
+          subject: "Playwright BDD Test Report - ${{ github.run_id }}"
+          to: ${{ secrets.TO_EMAIL }}
+          from: ${{ secrets.FROM_EMAIL }}
+          body: "Please find the attached Playwright BDD HTML report for run ID ${{ github.run_id }}."
+          attachments: reports/cucumber-report.html
