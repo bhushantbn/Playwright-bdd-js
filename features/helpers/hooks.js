@@ -1,6 +1,15 @@
-const { BeforeAll, Before, AfterAll, After, setDefaultTimeout } = require('@cucumber/cucumber');
-const { chromium } = require('playwright');
-const { pageFixture } = require('./pageFixture');
+const {
+  BeforeAll,
+  Before,
+  AfterAll,
+  After,
+  setDefaultTimeout,
+  Status,
+} = require("@cucumber/cucumber");
+const { chromium } = require("playwright");
+const { pageFixture } = require("./pageFixture");
+const fs = require("fs");
+const path = require("path");
 
 let browser;
 
@@ -8,17 +17,37 @@ let browser;
 setDefaultTimeout(60 * 1000);
 
 BeforeAll(async () => {
-  browser = await chromium.launch({ headless: false }); // change to true in CI
+  const isCI = process.env.CI === "true"; // GitHub Actions sets CI=true
+  browser = await chromium.launch({
+    headless: isCI, // ✅ headless in CI, headed locally
+    args: ["--no-sandbox", "--disable-setuid-sandbox"],
+  });
 });
 
 Before(async () => {
-  const context = await browser.newContext();
+  const context = await browser.newContext({
+    recordVideo: { dir: "reports/videos/" }, // store videos in reports/videos
+  });
   const page = await context.newPage();
   pageFixture.page = page;
 });
 
-After(async () => {
-  await pageFixture.page.close();
+After(async function (scenario) {
+  const page = pageFixture.page;
+  const context = page.context();
+
+  // Take screenshot on failure
+  if (scenario.result.status === Status.FAILED) {
+    const screenshotPath = path.join(
+      "reports/screenshots",
+      `${scenario.pickle.name}.png`
+    );
+    fs.mkdirSync(path.dirname(screenshotPath), { recursive: true });
+    await page.screenshot({ path: screenshotPath });
+    console.log(`📸 Screenshot saved: ${screenshotPath}`);
+  }
+
+  await context.close();
 });
 
 AfterAll(async () => {
