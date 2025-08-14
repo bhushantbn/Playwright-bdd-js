@@ -1,4 +1,4 @@
-name: Playwright BDD Tests
+name: Playwright Tests
 
 on:
   push:
@@ -30,28 +30,27 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
-      - name: Run Playwright BDD Tests
-        run: npm test
+      - name: Run Playwright Tests
+        run: npx playwright test --reporter=html
 
-      - name: Generate HTML Report
-        run: node generate-report.js
-
-      - name: Upload HTML Report as artifact
+      - name: Upload Playwright HTML Report
         uses: actions/upload-artifact@v4
         with:
-          name: cucumber-html-report
-          path: reports/cucumber-report.html
+          name: playwright-html-report
+          path: playwright-report/
           if-no-files-found: error
 
-      - name: Send Email with HTML Report Attachment
+      - name: Send Email with Playwright HTML Report
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: ${{ secrets.SMTP_SERVER }}
           server_port: ${{ secrets.SMTP_PORT }}
-          username: ${{ secrets.SMTP_USERNAME }}
-          password: ${{ secrets.SMTP_PASSWORD }}
-          subject: "Playwright BDD Test Report - ${{ github.run_id }}"
-          to: ${{ secrets.TO_EMAIL }}
-          from: ${{ secrets.FROM_EMAIL }}
-          body: "Please find the attached Playwright BDD HTML report for run ID ${{ github.run_id }}."
-          attachments: reports/cucumber-report.html
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "Playwright Test Report - ${{ github.run_id }}"
+          to: ${{ secrets.EMAIL_TO }}
+          from: ${{ secrets.EMAIL_USERNAME }}
+          body: |
+            <h2>Playwright Test Report</h2>
+            <p>Attached is the HTML test report for run ID <strong>${{ github.run_id }}</strong>.</p>
+          attachments: playwright-report/index.html
