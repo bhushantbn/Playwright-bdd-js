@@ -28,7 +28,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run Playwright BDD Tests
-        run: npx cucumber-js
+        run: npm test
 
       - name: Upload test reports (if any)
         uses: actions/upload-artifact@v4
