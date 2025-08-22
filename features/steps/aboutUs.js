@@ -44,3 +44,10 @@ Then(
     await aboutus.verifyMenu(expectedText);
   }
 );
+Then(
+  "there are {string} link should be displayed.",
+  async function (expectedCount) {
+    const actualCount = await aboutus.aboutusLinks();
+    expect(actualCount).toBe(Number(expectedCount)); // convert string → number
+  }
+);

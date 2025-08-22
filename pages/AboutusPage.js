@@ -44,24 +44,45 @@ class AboutusPage {
   async clickOnAboutUsLink() {
     await this.page.locator(this.openMenu).click();
   }
-async verifyMenu(expectedText) {
-  const aboutLink = this.page.locator('li#menu-item-6573 a');
+  async verifyMenu(expectedText) {
+    const aboutLink = this.page.locator("li#menu-item-6574 a");
 
-  // check the visible text
-  await expect(aboutLink).toHaveText("About");
+    // check the visible text
+    await expect(aboutLink).toHaveText("About");
 
-  // check the ::before pseudo-element content
-  const beforeContent = await aboutLink.evaluate((el) => {
-    return window.getComputedStyle(el, '::before').getPropertyValue('content');
-  });
+    // check the ::before pseudo-element content
+    const beforeContent = await aboutLink.evaluate((el) => {
+      return window
+        .getComputedStyle(el, "::before")
+        .getPropertyValue("content");
+    });
 
-  // Playwright returns '" /"' (quoted string), so strip quotes
-  const normalized = beforeContent.replace(/['"]/g, "");
-  if (normalized.trim() !== "/") {
-    throw new Error(`Expected pseudo-element content '/', but got: ${normalized}`);
+    // Playwright returns '" /"' (quoted string), so strip quotes
+    const normalized = beforeContent.replace(/['"]/g, "");
+    if (normalized.trim() !== "/") {
+      throw new Error(
+        `Expected pseudo-element content '/', but got: ${normalized}`
+      );
+    }
   }
-}
+  async aboutusLinks() {
+    // wait for links to be available
+    await this.page.locator(".elementor-inner a").first().waitFor();
 
+    const totalLinks = this.page.locator(".elementor-inner a");
+    const count = await totalLinks.count();
+
+    console.log(`...........Total links found: ${count}`);
+
+    for (let i = 0; i < count; i++) {
+      const text = (await totalLinks.nth(i).innerText()).trim();
+      const href = await totalLinks.nth(i).getAttribute("href");
+
+      console.log(`Link ${i + 1}: Text="${text}" | Href="${href}"`);
+    }
+
+    return count;
+  }
 }
 
 module.exports = { AboutusPage };

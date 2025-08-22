@@ -19,9 +19,14 @@ Feature: aboutus Feature
         Given user on to the home page
         When user opens the navigation menu and navigates to Aboutus page
         Then about use page Title underline should be displayed in 'QAAutomationLabs'
+
     Scenario: Verify Aboutus page Menu Item Link
         Given user on to the home page
         When user opens the navigation menu and navigates to Aboutus page
         And click on navigation menu link 2nd time
-        Then about us link should be display with 'About' menuitem
-    
+        Then about us link should be display with '/ About' menuitem
+    Scenario: Verify Aboutus page Menu Item Links
+        Given user on to the home page
+        When user opens the navigation menu and navigates to Aboutus page
+        Then there are '10' link should be displayed.
+
