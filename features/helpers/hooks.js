@@ -26,7 +26,7 @@ BeforeAll(async () => {
 
 Before(async () => {
   const context = await browser.newContext({
-    recordVideo: { dir: "reports/videos/" }, // store videos in reports/videos
+    //recordVideo: { dir: "reports/videos/" }, // store videos in reports/videos
   });
   const page = await context.newPage();
   pageFixture.page = page;

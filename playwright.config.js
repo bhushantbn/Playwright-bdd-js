@@ -17,7 +17,6 @@ module.exports = defineConfig({
     //viewport: { width: 1280, height: 720 },
     ignoreHTTPSErrors: true,
     screenshot: 'only-on-failure',
-    video: 'retain-on-failure',
     trace: 'on-first-retry',
   },
 
