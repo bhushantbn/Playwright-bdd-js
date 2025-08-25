@@ -3,12 +3,16 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js features/**/*.feature --require features/steps --require features/helpers/hooks.js --format json:test-results/report.json",
+    "test": "cucumber-js --require features/steps --require features/helpers/hooks.js --format json:test-results/report.json",
+    "test:courses": "cucumber-js features/courses.feature --require features/steps --require features/helpers/hooks.js --format json:test-results/report.json",
+    "test:aboutus": "cucumber-js features/aboutus.feature --require features/steps --require features/helpers/hooks.js --format json:test-results/report.json",
+    "test:login": "cucumber-js features/login.feature --require features/steps --require features/helpers/hooks.js --format json:test-results/report.json",
     "report": "node generate-report.js"
   },
   "dependencies": {
     "@cucumber/cucumber": "^9.0.0",
-    "@playwright/test": "^1.43.1"
+    "@playwright/test": "^1.43.1",
+    "debug": "^4.4.1"
   },
   "devDependencies": {
     "@babel/core": "^7.28.0",

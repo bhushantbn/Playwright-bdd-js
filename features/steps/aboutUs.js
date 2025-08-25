@@ -4,7 +4,7 @@ const { pageFixture } = require("../helpers/pageFixture");
 const { AboutusPage } = require("../../pages/AboutusPage");
 
 let aboutus;
-Given("user on to the home page", async function () {
+Given("user on to the home page for about us", async function () {
   await pageFixture.page.goto("https://qaautomationlabs.com/");
   aboutus = new AboutusPage(pageFixture.page);
 });

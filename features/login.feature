@@ -26,7 +26,7 @@ Feature: Login Feature
     When User enters email "demo@demo.com" and password "demo"
     And User clicks on the logout button
     Then User should be redirected to the login page
-
+  
 
 
 
