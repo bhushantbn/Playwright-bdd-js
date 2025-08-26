@@ -71,6 +71,6 @@ Then(
 Then(
   "User should see the page Additional heading font size as {string}",
   async function (expectedSize) {
-    await courses.verifyAdditionalHeadingFontSize(expectedSize);
+    await courses.verifyAdditionalPageTitleFontSize(expectedSize);
   }
 );
