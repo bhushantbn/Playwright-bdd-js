@@ -4,56 +4,56 @@
     "elements": [
       {
         "description": "",
-        "id": "courses-feature;verify-course-additional-page-title",
+        "id": "events-feature;verify-events-page-title",
         "keyword": "Scenario",
-        "line": 41,
-        "name": "Verify Course Additional Page Title",
+        "line": 3,
+        "name": "Verify events page title",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 308229799
+              "duration": 310169000
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 42,
-            "name": "user on to the home page for courses",
+            "line": 4,
+            "name": "user on to the home page for events",
             "match": {
-              "location": "features\\steps\\courses.js:8"
+              "location": "features\\steps\\events.js:8"
             },
             "result": {
               "status": "passed",
-              "duration": 2152862500
+              "duration": 3543140500
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 43,
-            "name": "User clicks on menu and click on courses link",
+            "line": 5,
+            "name": "User clicks on menu and click on events link",
             "match": {
-              "location": "features\\steps\\courses.js:12"
+              "location": "features\\steps\\events.js:12"
             },
             "result": {
               "status": "passed",
-              "duration": 574333599
+              "duration": 600245599
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 44,
-            "name": "User should see the paget heading font size as '80px'",
+            "line": 6,
+            "name": "User should see the events page title",
             "match": {
-              "location": "features\\steps\\courses.js:64"
+              "location": "features\\steps\\events.js:25"
             },
             "result": {
               "status": "passed",
-              "duration": 152506099
+              "duration": 60436200
             }
           },
           {
@@ -61,7 +61,548 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 105329399
+              "duration": 95951699
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "events-feature;verify-events-page-url",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Verify Events page URL",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 446752500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "user on to the home page for events",
+            "match": {
+              "location": "features\\steps\\events.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2942893900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "User clicks on menu and click on events link",
+            "match": {
+              "location": "features\\steps\\events.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 592386099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "User should see the events page URL",
+            "match": {
+              "location": "features\\steps\\events.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 61162000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 89909500
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "events-feature;verify-events-page-menu-item-link",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Verify Events page Menu Item Link",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 284842600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "user on to the home page for events",
+            "match": {
+              "location": "features\\steps\\events.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2494942600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "User clicks on menu and click on events link",
+            "match": {
+              "location": "features\\steps\\events.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 701049299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "click on navigation menu link 2nd time for events link",
+            "match": {
+              "location": "features\\steps\\events.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 604758800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "events link should be display with '/ events' menuitem",
+            "match": {
+              "location": "features\\steps\\events.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 36325900
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 82139100
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "events-feature;verify-events-page-cards",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "Verify Events page cards",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 290270200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 18,
+            "name": "user on to the home page for events",
+            "match": {
+              "location": "features\\steps\\events.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2291133700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "User clicks on menu and click on events link",
+            "match": {
+              "location": "features\\steps\\events.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 634244700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "User should see the '2' events page cards",
+            "match": {
+              "location": "features\\steps\\events.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 384182700
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 82824399
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "events-feature;verify-events-button-hover",
+        "keyword": "Scenario",
+        "line": 21,
+        "name": "Verify Events button hover",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 241542200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 22,
+            "name": "user on to the home page for events",
+            "match": {
+              "location": "features\\steps\\events.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2321194700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 23,
+            "name": "User clicks on menu and click on events link",
+            "match": {
+              "location": "features\\steps\\events.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 574831099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 24,
+            "name": "User should see the Events button hover in orange color",
+            "match": {
+              "location": "features\\steps\\events.js:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3550050300
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 64843099
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "events-feature;verify-events-read-more-links",
+        "keyword": "Scenario",
+        "line": 25,
+        "name": "Verify Events Read More Links",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 280027300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 26,
+            "name": "user on to the home page for events",
+            "match": {
+              "location": "features\\steps\\events.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2410871500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 27,
+            "name": "User clicks on menu and click on events link",
+            "match": {
+              "location": "features\\steps\\events.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 562461899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "User should see the Read More Links '2' times in events page",
+            "match": {
+              "location": "features\\steps\\events.js:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 157558000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 93705299
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "events-feature;verify-events-page-heading",
+        "keyword": "Scenario",
+        "line": 29,
+        "name": "Verify Events Page Heading",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 260349400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 30,
+            "name": "user on to the home page for events",
+            "match": {
+              "location": "features\\steps\\events.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2709767700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 31,
+            "name": "User clicks on menu and click on events link",
+            "match": {
+              "location": "features\\steps\\events.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 586878900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 32,
+            "name": "User should see the page heading as 'Events' in events page",
+            "match": {
+              "location": "features\\steps\\events.js:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 103205600
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 85678099
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "events-feature;verify-events-page-background",
+        "keyword": "Scenario",
+        "line": 33,
+        "name": "Verify Events Page Background",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 242204300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 34,
+            "name": "user on to the home page for events",
+            "match": {
+              "location": "features\\steps\\events.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2215049000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 35,
+            "name": "User clicks on menu and click on events link",
+            "match": {
+              "location": "features\\steps\\events.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 548942399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 36,
+            "name": "User should see the page background image in events page",
+            "match": {
+              "location": "features\\steps\\events.js:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 133414799
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 72893800
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "events-feature;verify-events-additional-page-title",
+        "keyword": "Scenario",
+        "line": 37,
+        "name": "Verify Events Additional Page Title",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 247109500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 38,
+            "name": "user on to the home page for events",
+            "match": {
+              "location": "features\\steps\\events.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2240264100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 39,
+            "name": "User clicks on menu and click on events link",
+            "match": {
+              "location": "features\\steps\\events.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 512703900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 40,
+            "name": "User should see the Additional page Title as 'Events' in events page",
+            "match": {
+              "location": "features\\steps\\events.js:58"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 151669999
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 68292500
             }
           }
         ],
@@ -69,11 +610,11 @@
         "type": "scenario"
       }
     ],
-    "id": "courses-feature",
+    "id": "events-feature",
     "line": 1,
     "keyword": "Feature",
-    "name": "Courses Feature",
+    "name": "Events Feature",
     "tags": [],
-    "uri": "features\\courses.feature"
+    "uri": "features\\events.feature"
   }
 ]

@@ -7,6 +7,7 @@
     "test:courses": "cucumber-js features/courses.feature --require features/steps --require features/helpers/hooks.js --format json:test-results/report.json",
     "test:aboutus": "cucumber-js features/aboutus.feature --require features/steps --require features/helpers/hooks.js --format json:test-results/report.json",
     "test:login": "cucumber-js features/login.feature --require features/steps --require features/helpers/hooks.js --format json:test-results/report.json",
+     "test:events": "cucumber-js features/events.feature --require features/steps --require features/helpers/hooks.js --format json:test-results/report.json",
     "report": "node generate-report.js"
   },
   "dependencies": {
