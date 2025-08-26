@@ -45,4 +45,4 @@ Feature: Courses Feature
     Scenario: Verify Course Additional Page Title font size
         Given user on to the home page for courses
         When User clicks on menu and click on courses link
-        Then User should see the page Additional heading font size as '2em'
+        Then User should see the page Additional heading font size as '160px'
