@@ -6,7 +6,7 @@ const {
   setDefaultTimeout,
   Status,
 } = require("@cucumber/cucumber");
-const { chromium } = require("playwright");
+const { chromium, firefox, webkit } = require("playwright");
 const { pageFixture } = require("./pageFixture");
 const fs = require("fs");
 const path = require("path");
@@ -18,16 +18,27 @@ setDefaultTimeout(60 * 1000);
 
 BeforeAll(async () => {
   const isCI = process.env.CI === "true"; // GitHub Actions sets CI=true
-  browser = await chromium.launch({
+
+  // 🔑 Pick browser from environment variable, default is chromium
+  const browserType = process.env.BROWSER || "chromium";
+  let browserInstance;
+
+  if (browserType === "firefox") {
+    browserInstance = firefox;
+  } else if (browserType === "webkit") {
+    browserInstance = webkit;
+  } else {
+    browserInstance = chromium;
+  }
+
+  browser = await browserInstance.launch({
     headless: isCI, // ✅ headless in CI, headed locally
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
   });
 });
 
 Before(async () => {
-  const context = await browser.newContext({
-    //recordVideo: { dir: "reports/videos/" }, // store videos in reports/videos
-  });
+  const context = await browser.newContext();
   const page = await context.newPage();
   pageFixture.page = page;
 });

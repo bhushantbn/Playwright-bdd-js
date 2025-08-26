@@ -38,3 +38,11 @@ Feature: Events Feature
         Given user on to the home page for events
         When User clicks on menu and click on events link
         Then User should see the Additional page Title as 'Events' in events page
+    Scenario: Verify Events heading Page Title font size
+        Given user on to the home page for events
+        When User clicks on menu and click on events link
+        Then User should see the page heading font size as '80px' in events page
+    Scenario: Verify Events Additional Page Title font size
+        Given user on to the home page for events
+        When User clicks on menu and click on events link
+        Then User should see the events page Additional heading font size as '160px'

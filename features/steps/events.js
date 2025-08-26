@@ -62,15 +62,15 @@ Then(
   }
 );
 Then(
-  "User should see the page heading font size as {string}",
+  "User should see the page heading font size as {string} in events page",
   async function (expectedSize) {
     await events.verifyHeadingFontSize(expectedSize);
   }
 );
 
 Then(
-  "User should see the page Additional heading font size as {string}",
+  "User should see the events page Additional heading font size as {string}",
   async function (expectedSize) {
-    await events.verifyAdditionalHeadingFontSize(expectedSize);
+    await events.verifyAdditionalPageTitleFontSize(expectedSize);
   }
 );
