@@ -68,12 +68,6 @@ class CoursesPage {
   async verifyHeadingText(expectedText) {
     await expect(this.heading).toHaveText(expectedText);
   }
-  async verifyPageBackground() {
-    await expect(this.pageBackground).toHaveCSS(
-      "background-image",
-      'url("https://mayag.in/qaautomationlabs/wp-content/uploads/2023/08/page-title-inner.jpg")'
-    );
-  }
   async verifyAdditionalPageTitle(expectedText){
     await expect(this.additionalHeading).toHaveText(expectedText);
   }

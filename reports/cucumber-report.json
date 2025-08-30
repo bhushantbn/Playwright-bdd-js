@@ -4,56 +4,56 @@
     "elements": [
       {
         "description": "",
-        "id": "events-feature;verify-events-page-title",
+        "id": "blog-feature;verify-blog-page-title",
         "keyword": "Scenario",
         "line": 3,
-        "name": "Verify events page title",
+        "name": "Verify blog page title",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 337732100
+              "duration": 278967999
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
             "line": 4,
-            "name": "user on to the home page for events",
+            "name": "user on to the home page for blog",
             "match": {
-              "location": "features\\steps\\events.js:8"
+              "location": "features\\steps\\blogs.js:7"
             },
             "result": {
               "status": "passed",
-              "duration": 2669475000
+              "duration": 2623513000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 5,
-            "name": "User clicks on menu and click on events link",
+            "name": "User clicks on menu and click on blog link",
             "match": {
-              "location": "features\\steps\\events.js:12"
+              "location": "features\\steps\\blogs.js:11"
             },
             "result": {
               "status": "passed",
-              "duration": 546977699
+              "duration": 633234299
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 6,
-            "name": "User should see the events page title",
+            "name": "User should see the blog page title",
             "match": {
-              "location": "features\\steps\\events.js:25"
+              "location": "features\\steps\\blogs.js:23"
             },
             "result": {
               "status": "passed",
-              "duration": 29082399
+              "duration": 93792299
             }
           },
           {
@@ -61,7 +61,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 69996600
+              "duration": 140262799
             }
           }
         ],
@@ -70,56 +70,56 @@
       },
       {
         "description": "",
-        "id": "events-feature;verify-events-page-url",
+        "id": "blog-feature;verify-blog-page-url",
         "keyword": "Scenario",
         "line": 8,
-        "name": "Verify Events page URL",
+        "name": "Verify blog page URL",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 342020200
+              "duration": 219404300
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
             "line": 9,
-            "name": "user on to the home page for events",
+            "name": "user on to the home page for blog",
             "match": {
-              "location": "features\\steps\\events.js:8"
+              "location": "features\\steps\\blogs.js:7"
             },
             "result": {
               "status": "passed",
-              "duration": 2011001999
+              "duration": 2050695899
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 10,
-            "name": "User clicks on menu and click on events link",
+            "name": "User clicks on menu and click on blog link",
             "match": {
-              "location": "features\\steps\\events.js:12"
+              "location": "features\\steps\\blogs.js:11"
             },
             "result": {
               "status": "passed",
-              "duration": 542585399
+              "duration": 641586000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 11,
-            "name": "User should see the events page URL",
+            "name": "User should see the blog page URL",
             "match": {
-              "location": "features\\steps\\events.js:22"
+              "location": "features\\steps\\blogs.js:26"
             },
             "result": {
               "status": "passed",
-              "duration": 13319499
+              "duration": 94838000
             }
           },
           {
@@ -127,7 +127,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 82388399
+              "duration": 87520299
             }
           }
         ],
@@ -136,69 +136,69 @@
       },
       {
         "description": "",
-        "id": "events-feature;verify-events-page-menu-item-link",
+        "id": "blog-feature;verify-blog-page-menu-item-link",
         "keyword": "Scenario",
         "line": 12,
-        "name": "Verify Events page Menu Item Link",
+        "name": "Verify blog page Menu Item Link",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 204278100
+              "duration": 249765200
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
             "line": 13,
-            "name": "user on to the home page for events",
+            "name": "user on to the home page for blog",
             "match": {
-              "location": "features\\steps\\events.js:8"
+              "location": "features\\steps\\blogs.js:7"
             },
             "result": {
               "status": "passed",
-              "duration": 2068069200
+              "duration": 2169579199
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 14,
-            "name": "User clicks on menu and click on events link",
+            "name": "User clicks on menu and click on blog link",
             "match": {
-              "location": "features\\steps\\events.js:12"
+              "location": "features\\steps\\blogs.js:11"
             },
             "result": {
               "status": "passed",
-              "duration": 527371899
+              "duration": 604127300
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 15,
-            "name": "click on navigation menu link 2nd time for events link",
+            "name": "click on navigation menu link 2nd time for blog link",
             "match": {
-              "location": "features\\steps\\events.js:16"
+              "location": "features\\steps\\blogs.js:14"
             },
             "result": {
               "status": "passed",
-              "duration": 517812600
+              "duration": 554692499
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 16,
-            "name": "events link should be display with '/ events' menuitem",
+            "name": "blog link should be display with '/ blog' menuitem",
             "match": {
-              "location": "features\\steps\\events.js:28"
+              "location": "features\\steps\\blogs.js:17"
             },
             "result": {
               "status": "passed",
-              "duration": 31224499
+              "duration": 47621399
             }
           },
           {
@@ -206,7 +206,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 72958799
+              "duration": 66595399
             }
           }
         ],
@@ -215,56 +215,56 @@
       },
       {
         "description": "",
-        "id": "events-feature;verify-events-page-cards",
+        "id": "blog-feature;verify-blog-page-cards",
         "keyword": "Scenario",
         "line": 17,
-        "name": "Verify Events page cards",
+        "name": "Verify blog page cards",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 235997099
+              "duration": 285900299
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
             "line": 18,
-            "name": "user on to the home page for events",
+            "name": "user on to the home page for blog",
             "match": {
-              "location": "features\\steps\\events.js:8"
+              "location": "features\\steps\\blogs.js:7"
             },
             "result": {
               "status": "passed",
-              "duration": 2034563799
+              "duration": 1990089800
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 19,
-            "name": "User clicks on menu and click on events link",
+            "name": "User clicks on menu and click on blog link",
             "match": {
-              "location": "features\\steps\\events.js:12"
+              "location": "features\\steps\\blogs.js:11"
             },
             "result": {
               "status": "passed",
-              "duration": 515695600
+              "duration": 557044000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 20,
-            "name": "User should see the '2' events page cards",
+            "name": "User should see the blog page cards",
             "match": {
-              "location": "features\\steps\\events.js:34"
+              "location": "features\\steps\\blogs.js:29"
             },
             "result": {
               "status": "passed",
-              "duration": 146812500
+              "duration": 155059700
             }
           },
           {
@@ -272,7 +272,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 74752699
+              "duration": 86380600
             }
           }
         ],
@@ -281,56 +281,56 @@
       },
       {
         "description": "",
-        "id": "events-feature;verify-events-button-hover",
+        "id": "blog-feature;verify-blog-read-more-links",
         "keyword": "Scenario",
         "line": 21,
-        "name": "Verify Events button hover",
+        "name": "Verify blog Read More Links",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 211044999
+              "duration": 242266799
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
             "line": 22,
-            "name": "user on to the home page for events",
+            "name": "user on to the home page for blog",
             "match": {
-              "location": "features\\steps\\events.js:8"
+              "location": "features\\steps\\blogs.js:7"
             },
             "result": {
               "status": "passed",
-              "duration": 1981962400
+              "duration": 2068874099
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 23,
-            "name": "User clicks on menu and click on events link",
+            "name": "User clicks on menu and click on blog link",
             "match": {
-              "location": "features\\steps\\events.js:12"
+              "location": "features\\steps\\blogs.js:11"
             },
             "result": {
               "status": "passed",
-              "duration": 531353600
+              "duration": 697772600
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 24,
-            "name": "User should see the Events button hover in orange color",
+            "name": "User should see the Read More Links '12' times for blog page",
             "match": {
-              "location": "features\\steps\\events.js:37"
+              "location": "features\\steps\\blogs.js:32"
             },
             "result": {
               "status": "passed",
-              "duration": 3558833299
+              "duration": 88394600
             }
           },
           {
@@ -338,7 +338,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 106232100
+              "duration": 160786500
             }
           }
         ],
@@ -347,56 +347,56 @@
       },
       {
         "description": "",
-        "id": "events-feature;verify-events-read-more-links",
+        "id": "blog-feature;verify-blog-page-heading",
         "keyword": "Scenario",
         "line": 25,
-        "name": "Verify Events Read More Links",
+        "name": "Verify blog Page Heading",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 238265299
+              "duration": 251105200
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
             "line": 26,
-            "name": "user on to the home page for events",
+            "name": "user on to the home page for blog",
             "match": {
-              "location": "features\\steps\\events.js:8"
+              "location": "features\\steps\\blogs.js:7"
             },
             "result": {
               "status": "passed",
-              "duration": 2167613200
+              "duration": 2086810399
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 27,
-            "name": "User clicks on menu and click on events link",
+            "name": "User clicks on menu and click on blog link",
             "match": {
-              "location": "features\\steps\\events.js:12"
+              "location": "features\\steps\\blogs.js:11"
             },
             "result": {
               "status": "passed",
-              "duration": 522979500
+              "duration": 643640500
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 28,
-            "name": "User should see the Read More Links '2' times in events page",
+            "name": "User should see the page heading as 'Blog' in blog page",
             "match": {
-              "location": "features\\steps\\events.js:43"
+              "location": "features\\steps\\blogs.js:45"
             },
             "result": {
               "status": "passed",
-              "duration": 64988799
+              "duration": 108960199
             }
           },
           {
@@ -404,7 +404,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 77914399
+              "duration": 98498400
             }
           }
         ],
@@ -413,56 +413,56 @@
       },
       {
         "description": "",
-        "id": "events-feature;verify-events-page-heading",
+        "id": "blog-feature;verify-blog-page-background-color",
         "keyword": "Scenario",
         "line": 29,
-        "name": "Verify Events Page Heading",
+        "name": "Verify blog Page Background Color",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 209526100
+              "duration": 229802299
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
             "line": 30,
-            "name": "user on to the home page for events",
+            "name": "user on to the home page for blog",
             "match": {
-              "location": "features\\steps\\events.js:8"
+              "location": "features\\steps\\blogs.js:7"
             },
             "result": {
               "status": "passed",
-              "duration": 2024711000
+              "duration": 2429146999
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 31,
-            "name": "User clicks on menu and click on events link",
+            "name": "User clicks on menu and click on blog link",
             "match": {
-              "location": "features\\steps\\events.js:12"
+              "location": "features\\steps\\blogs.js:11"
             },
             "result": {
               "status": "passed",
-              "duration": 623460800
+              "duration": 557075199
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 32,
-            "name": "User should see the page heading as 'Events' in events page",
+            "name": "User should see the page background color",
             "match": {
-              "location": "features\\steps\\events.js:49"
+              "location": "features\\steps\\blogs.js:51"
             },
             "result": {
               "status": "passed",
-              "duration": 109025300
+              "duration": 93292700
             }
           },
           {
@@ -470,7 +470,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 103439300
+              "duration": 90943499
             }
           }
         ],
@@ -479,56 +479,56 @@
       },
       {
         "description": "",
-        "id": "events-feature;verify-events-page-background",
+        "id": "blog-feature;verify-blog-additional-page-title",
         "keyword": "Scenario",
         "line": 33,
-        "name": "Verify Events Page Background",
+        "name": "Verify blog Additional Page Title",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 262464399
+              "duration": 220748099
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
             "line": 34,
-            "name": "user on to the home page for events",
+            "name": "user on to the home page for blog",
             "match": {
-              "location": "features\\steps\\events.js:8"
+              "location": "features\\steps\\blogs.js:7"
             },
             "result": {
               "status": "passed",
-              "duration": 1951171300
+              "duration": 2752200299
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 35,
-            "name": "User clicks on menu and click on events link",
+            "name": "User clicks on menu and click on blog link",
             "match": {
-              "location": "features\\steps\\events.js:12"
+              "location": "features\\steps\\blogs.js:11"
             },
             "result": {
               "status": "passed",
-              "duration": 544600600
+              "duration": 565968700
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 36,
-            "name": "User should see the page background image in events page",
+            "name": "User should see the Additional page Title as 'Blog' in blog page",
             "match": {
-              "location": "features\\steps\\events.js:55"
+              "location": "features\\steps\\blogs.js:54"
             },
             "result": {
               "status": "passed",
-              "duration": 138900500
+              "duration": 63894199
             }
           },
           {
@@ -536,7 +536,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 74743999
+              "duration": 94405199
             }
           }
         ],
@@ -545,56 +545,56 @@
       },
       {
         "description": "",
-        "id": "events-feature;verify-events-additional-page-title",
+        "id": "blog-feature;verify-blog-heading-page-title-font-size",
         "keyword": "Scenario",
         "line": 37,
-        "name": "Verify Events Additional Page Title",
+        "name": "Verify blog heading Page Title font size",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 225398400
+              "duration": 260117700
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
             "line": 38,
-            "name": "user on to the home page for events",
+            "name": "user on to the home page for blog",
             "match": {
-              "location": "features\\steps\\events.js:8"
+              "location": "features\\steps\\blogs.js:7"
             },
             "result": {
               "status": "passed",
-              "duration": 2022509000
+              "duration": 2351005900
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 39,
-            "name": "User clicks on menu and click on events link",
+            "name": "User clicks on menu and click on blog link",
             "match": {
-              "location": "features\\steps\\events.js:12"
+              "location": "features\\steps\\blogs.js:11"
             },
             "result": {
               "status": "passed",
-              "duration": 541704900
+              "duration": 628631400
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 40,
-            "name": "User should see the Additional page Title as 'Events' in events page",
+            "name": "User should see the page heading font size as '80px' in blog page",
             "match": {
-              "location": "features\\steps\\events.js:58"
+              "location": "features\\steps\\blogs.js:57"
             },
             "result": {
               "status": "passed",
-              "duration": 147322600
+              "duration": 130032000
             }
           },
           {
@@ -602,7 +602,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 86080700
+              "duration": 85035500
             }
           }
         ],
@@ -611,56 +611,56 @@
       },
       {
         "description": "",
-        "id": "events-feature;verify-events-heading-page-title-font-size",
+        "id": "blog-feature;verify-blog-additional-page-title-font-size",
         "keyword": "Scenario",
         "line": 41,
-        "name": "Verify Events heading Page Title font size",
+        "name": "Verify blog Additional Page Title font size",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 332652400
+              "duration": 233284499
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
             "line": 42,
-            "name": "user on to the home page for events",
+            "name": "user on to the home page for blog",
             "match": {
-              "location": "features\\steps\\events.js:8"
+              "location": "features\\steps\\blogs.js:7"
             },
             "result": {
               "status": "passed",
-              "duration": 2178865199
+              "duration": 2423686600
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 43,
-            "name": "User clicks on menu and click on events link",
+            "name": "User clicks on menu and click on blog link",
             "match": {
-              "location": "features\\steps\\events.js:12"
+              "location": "features\\steps\\blogs.js:11"
             },
             "result": {
               "status": "passed",
-              "duration": 587636900
+              "duration": 571432699
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 44,
-            "name": "User should see the page heading font size as '80px' in events page",
+            "name": "User should see the page Additional heading font size as '160px' in blog page",
             "match": {
-              "location": "features\\steps\\events.js:64"
+              "location": "features\\steps\\blogs.js:60"
             },
             "result": {
               "status": "passed",
-              "duration": 157584100
+              "duration": 148730100
             }
           },
           {
@@ -668,73 +668,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 98451200
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "events-feature;verify-events-additional-page-title-font-size",
-        "keyword": "Scenario",
-        "line": 45,
-        "name": "Verify Events Additional Page Title font size",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 259674400
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 46,
-            "name": "user on to the home page for events",
-            "match": {
-              "location": "features\\steps\\events.js:8"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2293745100
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 47,
-            "name": "User clicks on menu and click on events link",
-            "match": {
-              "location": "features\\steps\\events.js:12"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 508743200
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 48,
-            "name": "User should see the events page Additional heading font size as '160px'",
-            "match": {
-              "location": "features\\steps\\events.js:71"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 141110000
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 92552100
+              "duration": 79851800
             }
           }
         ],
@@ -742,11 +676,11 @@
         "type": "scenario"
       }
     ],
-    "id": "events-feature",
+    "id": "blog-feature",
     "line": 1,
     "keyword": "Feature",
-    "name": "Events Feature",
+    "name": "Blog Feature",
     "tags": [],
-    "uri": "features\\events.feature"
+    "uri": "features\\blog.feature"
   }
 ]
