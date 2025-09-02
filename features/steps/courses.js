@@ -73,4 +73,8 @@ Then(
   async function (expectedSize) {
     await courses.verifyAdditionalPageTitleFontSize(expectedSize);
   }
+ 
 );
+ Then("User should see the Course button hover in orange color",async function(){
+    await courses.verifyButtonHover();
+  })

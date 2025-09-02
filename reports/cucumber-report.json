@@ -4,56 +4,56 @@
     "elements": [
       {
         "description": "",
-        "id": "contact-us-feature;verify-background-image",
+        "id": "aboutus-feature;verify-aboutus-page-title",
         "keyword": "Scenario",
-        "line": 59,
-        "name": "Verify Background image",
+        "line": 3,
+        "name": "Verify Aboutus page Title",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 290222600
+              "duration": 132796299
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 60,
-            "name": "user on to the home page for contact page",
+            "line": 4,
+            "name": "user on to the home page for about us",
             "match": {
-              "location": "features\\steps\\contactus.js:8"
+              "location": "features\\steps\\aboutUs.js:7"
             },
             "result": {
               "status": "passed",
-              "duration": 2147213399
+              "duration": 1984955499
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 61,
-            "name": "User clicks on menu and click on Contact link",
+            "line": 5,
+            "name": "user opens the navigation menu and navigates to Aboutus page",
             "match": {
-              "location": "features\\steps\\contactus.js:12"
+              "location": "features\\steps\\aboutUs.js:11"
             },
             "result": {
               "status": "passed",
-              "duration": 545136400
+              "duration": 555924099
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 62,
-            "name": "Verify Background Image URL",
+            "line": 6,
+            "name": "about use page title should be displayed",
             "match": {
-              "location": "features\\steps\\contactus.js:116"
+              "location": "features\\steps\\aboutUs.js:20"
             },
             "result": {
               "status": "passed",
-              "duration": 51998199
+              "duration": 47753399
             }
           },
           {
@@ -61,7 +61,350 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 80173100
+              "duration": 11385800
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "aboutus-feature;verify-aboutus-page-heading",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Verify Aboutus page heading",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 84479299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "user on to the home page for about us",
+            "match": {
+              "location": "features\\steps\\aboutUs.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2055070899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "user opens the navigation menu and navigates to Aboutus page",
+            "match": {
+              "location": "features\\steps\\aboutUs.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 530326999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "about use page heading should be displayed as 'Kailash Pathak'",
+            "match": {
+              "location": "features\\steps\\aboutUs.js:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 149869200
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 8583199
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "aboutus-feature;verify-aboutus-page-authorheading-underline",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "Verify Aboutus page AuthorHeading Underline",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 75881500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "user on to the home page for about us",
+            "match": {
+              "location": "features\\steps\\aboutUs.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2564443599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "user opens the navigation menu and navigates to Aboutus page",
+            "match": {
+              "location": "features\\steps\\aboutUs.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 488772300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "about use page heading underline should be displayed in  'Kailash Pathak'",
+            "match": {
+              "location": "features\\steps\\aboutUs.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 154846000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 4078700
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "aboutus-feature;verify-aboutus-page-authortitle-underline",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "Verify Aboutus page AuthorTitle Underline",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 64414999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 19,
+            "name": "user on to the home page for about us",
+            "match": {
+              "location": "features\\steps\\aboutUs.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2128936699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "user opens the navigation menu and navigates to Aboutus page",
+            "match": {
+              "location": "features\\steps\\aboutUs.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 519608099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "about use page Title underline should be displayed in 'QAAutomationLabs'",
+            "match": {
+              "location": "features\\steps\\aboutUs.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 182967999
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 5022000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "aboutus-feature;verify-aboutus-page-menu-item-link",
+        "keyword": "Scenario",
+        "line": 23,
+        "name": "Verify Aboutus page Menu Item Link",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 81341600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 24,
+            "name": "user on to the home page for about us",
+            "match": {
+              "location": "features\\steps\\aboutUs.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2194641900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "user opens the navigation menu and navigates to Aboutus page",
+            "match": {
+              "location": "features\\steps\\aboutUs.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 497161199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "click on navigation menu link 2nd time",
+            "match": {
+              "location": "features\\steps\\aboutUs.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 464208700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 27,
+            "name": "about us link should be display with '/ About' menuitem",
+            "match": {
+              "location": "features\\steps\\aboutUs.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26011799
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 4647299
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "aboutus-feature;verify-aboutus-page-menu-item-links",
+        "keyword": "Scenario",
+        "line": 28,
+        "name": "Verify Aboutus page Menu Item Links",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 62734200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 29,
+            "name": "user on to the home page for about us",
+            "match": {
+              "location": "features\\steps\\aboutUs.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3848066500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 30,
+            "name": "user opens the navigation menu and navigates to Aboutus page",
+            "match": {
+              "location": "features\\steps\\aboutUs.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 499683299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 31,
+            "name": "there are '10' link should be displayed.",
+            "match": {
+              "location": "features\\steps\\aboutUs.js:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 188698399
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 7117499
             }
           }
         ],
@@ -69,11 +412,11 @@
         "type": "scenario"
       }
     ],
-    "id": "contact-us-feature",
+    "id": "aboutus-feature",
     "line": 1,
     "keyword": "Feature",
-    "name": "Contact Us Feature",
+    "name": "aboutus Feature",
     "tags": [],
-    "uri": "features\\contactus.feature"
+    "uri": "features\\aboutus.feature"
   }
 ]

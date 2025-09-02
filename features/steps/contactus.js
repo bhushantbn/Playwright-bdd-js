@@ -58,36 +58,22 @@ Then(
     await contactus.verifyButtonHover();
   }
 );
+
 Then(
-  "User should see the Read More Links {string} times",
-  async function (expectedCount) {
-    await contactus.verifyReadMoreLinks(parseInt(expectedCount));
-  }
-);
-Then(
-  "User should see the page heading as {string}",
-  async function (expectedText) {
-    await contactus.verifyHeadingText(expectedText);
-  }
-);
-Then("User should see the page background image", async function () {
-  await contactus.verifyPageBackground();
-});
-Then(
-  "User should see the Additional page Title as {string}",
+  "User should see the Additional page Title as {string} in contact page",
   async function (expectedText) {
     await contactus.verifyAdditionalPageTitle(expectedText);
   }
 );
 Then(
-  "User should see the page heading font size as {string}",
+  "User should see the page heading font size as {string} in contact page",
   async function (expectedSize) {
     await contactus.verifyHeadingFontSize(expectedSize);
   }
 );
 
 Then(
-  "User should see the page Additional heading font size as {string}",
+  "User should see the page additional heading font size as {string} in contact page",
   async function (expectedSize) {
     await contactus.verifyAdditionalPageTitleFontSize(expectedSize);
   }

@@ -60,3 +60,15 @@ Feature: Contact Us Feature
         Given user on to the home page for contact page
         When User clicks on menu and click on Contact link
         Then Verify Background Image URL
+    Scenario: Verify Heading font size
+        Given user on to the home page for contact page
+        When User clicks on menu and click on Contact link
+        Then User should see the page heading font size as '80 px' in contact page
+     Scenario: Verify Additional Heading font size
+        Given user on to the home page for contact page
+        When User clicks on menu and click on Contact link
+        Then User should see the page additional heading font size as '160 px' in contact page
+    Scenario: Verify Contact Additional Page Title
+        Given user on to the home page for contact page
+        When User clicks on menu and click on Contact link
+        Then User should see the Additional page Title as 'Contact' in contact page

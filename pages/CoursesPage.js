@@ -81,6 +81,12 @@ class CoursesPage {
       `${expectedFontSize}`
     );
   }
+  async verifyPageBackground(){
+    await expect(this.pageBackground).toHaveCSS(
+      "background-image",
+      'url("https://mayag.in/qaautomationlabs/wp-content/uploads/2023/08/page-title-inner.jpg")'
+    );
+  }
 }
 
 module.exports = { CoursesPage };

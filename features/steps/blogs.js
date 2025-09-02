@@ -37,7 +37,7 @@ Then(
 );
 
 Then(
-  "about us link should be display with {string} menuitem",
+  "blog link should be display with {string} menuitem",
   async function (expectedText) {
     await blog.verifyMenu(expectedText);
   }
@@ -48,19 +48,28 @@ Then(
     await blog.verifyPageHeading(expectedText);
   }
 );
-Then("User should see the page background color",async function(){
+Then("User should see the page background color", async function () {
   await blog.verifyblogPageBGColor();
 });
-Then("User should see the Additional page Title as {string} in blog page",async function(expectedText){
+Then(
+  "User should see the Additional page Title as {string} in blog page",
+  async function (expectedText) {
     await blog.verifyAdditionalPageTitle(expectedText);
-});
-Then("User should see the page heading font size as {string} in blog page",async function(expectedSize){
-  await blog.verifyHeadingFontSize(expectedSize);
-});
-Then("User should see the page Additional heading font size as {string} in blog page",async function(expectedSize){
-  await blog.verifyAdditionalPageTitleFontSize(expectedSize);
-});
-Then("User should see all the links of blog page",async function(){
+  }
+);
+Then(
+  "User should see the page heading font size as {string} in blog page",
+  async function (expectedSize) {
+    await blog.verifyHeadingFontSize(expectedSize);
+  }
+);
+Then(
+  "User should see the page Additional heading font size as {string} in blog page",
+  async function (expectedSize) {
+    await blog.verifyAdditionalPageTitleFontSize(expectedSize);
+  }
+);
+Then("User should see all the links of blog page", async function () {
   await blog.blogLinks();
 });
 Then(
