@@ -4,56 +4,56 @@
     "elements": [
       {
         "description": "",
-        "id": "aboutus-feature;verify-aboutus-page-title",
+        "id": "contact-us-feature;verify-contact-page-title",
         "keyword": "Scenario",
         "line": 3,
-        "name": "Verify Aboutus page Title",
+        "name": "Verify Contact Page title",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 132796299
+              "duration": 166195299
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
             "line": 4,
-            "name": "user on to the home page for about us",
+            "name": "user on to the home page for contact page",
             "match": {
-              "location": "features\\steps\\aboutUs.js:7"
+              "location": "features\\steps\\contactus.js:8"
             },
             "result": {
               "status": "passed",
-              "duration": 1984955499
+              "duration": 2358402799
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 5,
-            "name": "user opens the navigation menu and navigates to Aboutus page",
+            "name": "User clicks on menu and click on Contact link",
             "match": {
-              "location": "features\\steps\\aboutUs.js:11"
+              "location": "features\\steps\\contactus.js:12"
             },
             "result": {
               "status": "passed",
-              "duration": 555924099
+              "duration": 609370499
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 6,
-            "name": "about use page title should be displayed",
+            "name": "Contact Page title should be visible",
             "match": {
-              "location": "features\\steps\\aboutUs.js:20"
+              "location": "features\\steps\\contactus.js:38"
             },
             "result": {
               "status": "passed",
-              "duration": 47753399
+              "duration": 62138500
             }
           },
           {
@@ -61,7 +61,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 11385800
+              "duration": 15196399
             }
           }
         ],
@@ -70,56 +70,69 @@
       },
       {
         "description": "",
-        "id": "aboutus-feature;verify-aboutus-page-heading",
+        "id": "contact-us-feature;verify-contact-page-menu-item-link",
         "keyword": "Scenario",
-        "line": 8,
-        "name": "Verify Aboutus page heading",
+        "line": 7,
+        "name": "Verify Contact page Menu Item Link",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 84479299
+              "duration": 105940499
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 9,
-            "name": "user on to the home page for about us",
+            "line": 8,
+            "name": "user on to the home page for contact page",
             "match": {
-              "location": "features\\steps\\aboutUs.js:7"
+              "location": "features\\steps\\contactus.js:8"
             },
             "result": {
               "status": "passed",
-              "duration": 2055070899
+              "duration": 2428137099
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 10,
-            "name": "user opens the navigation menu and navigates to Aboutus page",
+            "line": 9,
+            "name": "User clicks on menu and click on Contact link",
             "match": {
-              "location": "features\\steps\\aboutUs.js:11"
+              "location": "features\\steps\\contactus.js:12"
             },
             "result": {
               "status": "passed",
-              "duration": 530326999
+              "duration": 554147000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "click on navigation menu link 2nd time for Contact link",
+            "match": {
+              "location": "features\\steps\\contactus.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 532559599
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 11,
-            "name": "about use page heading should be displayed as 'Kailash Pathak'",
+            "name": "contacts link should be display with '/ Contacts' menuitem",
             "match": {
-              "location": "features\\steps\\aboutUs.js:23"
+              "location": "features\\steps\\contactus.js:41"
             },
             "result": {
               "status": "passed",
-              "duration": 149869200
+              "duration": 34021299
             }
           },
           {
@@ -127,7 +140,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 8583199
+              "duration": 4966199
             }
           }
         ],
@@ -136,56 +149,56 @@
       },
       {
         "description": "",
-        "id": "aboutus-feature;verify-aboutus-page-authorheading-underline",
+        "id": "contact-us-feature;verify-contact-page-url",
         "keyword": "Scenario",
-        "line": 13,
-        "name": "Verify Aboutus page AuthorHeading Underline",
+        "line": 12,
+        "name": "Verify Contact Page URL",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 75881500
+              "duration": 76868000
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 14,
-            "name": "user on to the home page for about us",
+            "line": 13,
+            "name": "user on to the home page for contact page",
             "match": {
-              "location": "features\\steps\\aboutUs.js:7"
+              "location": "features\\steps\\contactus.js:8"
             },
             "result": {
               "status": "passed",
-              "duration": 2564443599
+              "duration": 2046877599
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 15,
-            "name": "user opens the navigation menu and navigates to Aboutus page",
+            "line": 14,
+            "name": "User clicks on menu and click on Contact link",
             "match": {
-              "location": "features\\steps\\aboutUs.js:11"
+              "location": "features\\steps\\contactus.js:12"
             },
             "result": {
               "status": "passed",
-              "duration": 488772300
+              "duration": 574883400
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 16,
-            "name": "about use page heading underline should be displayed in  'Kailash Pathak'",
+            "line": 15,
+            "name": "User should see the Contact page URL",
             "match": {
-              "location": "features\\steps\\aboutUs.js:29"
+              "location": "features\\steps\\contactus.js:35"
             },
             "result": {
               "status": "passed",
-              "duration": 154846000
+              "duration": 62038899
             }
           },
           {
@@ -193,7 +206,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 4078700
+              "duration": 7033899
             }
           }
         ],
@@ -202,56 +215,69 @@
       },
       {
         "description": "",
-        "id": "aboutus-feature;verify-aboutus-page-authortitle-underline",
+        "id": "contact-us-feature;blank-scenario-for-contact-form",
         "keyword": "Scenario",
-        "line": 18,
-        "name": "Verify Aboutus page AuthorTitle Underline",
+        "line": 17,
+        "name": "Blank Scenario for Contact Form",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 64414999
+              "duration": 82929099
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 19,
-            "name": "user on to the home page for about us",
+            "line": 18,
+            "name": "user on to the home page for contact page",
             "match": {
-              "location": "features\\steps\\aboutUs.js:7"
+              "location": "features\\steps\\contactus.js:8"
             },
             "result": {
               "status": "passed",
-              "duration": 2128936699
+              "duration": 2081439500
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 20,
-            "name": "user opens the navigation menu and navigates to Aboutus page",
+            "line": 19,
+            "name": "User clicks on menu and click on Contact link",
             "match": {
-              "location": "features\\steps\\aboutUs.js:11"
+              "location": "features\\steps\\contactus.js:12"
             },
             "result": {
               "status": "passed",
-              "duration": 519608099
+              "duration": 509747099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "User click on submit button without fill form",
+            "match": {
+              "location": "features\\steps\\contactus.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 476498399
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 21,
-            "name": "about use page Title underline should be displayed in 'QAAutomationLabs'",
+            "name": "Require field message should be visible",
             "match": {
-              "location": "features\\steps\\aboutUs.js:35"
+              "location": "features\\steps\\contactus.js:32"
             },
             "result": {
               "status": "passed",
-              "duration": 182967999
+              "duration": 26683600
             }
           },
           {
@@ -259,7 +285,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 5022000
+              "duration": 7572699
             }
           }
         ],
@@ -268,69 +294,70 @@
       },
       {
         "description": "",
-        "id": "aboutus-feature;verify-aboutus-page-menu-item-link",
+        "id": "contact-us-feature;positive-scenario-for-contact-page",
         "keyword": "Scenario",
-        "line": 23,
-        "name": "Verify Aboutus page Menu Item Link",
+        "line": 22,
+        "name": "Positive Scenario for contact page",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 81341600
+              "duration": 65482100
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 24,
-            "name": "user on to the home page for about us",
+            "line": 23,
+            "name": "user on to the home page for contact page",
             "match": {
-              "location": "features\\steps\\aboutUs.js:7"
+              "location": "features\\steps\\contactus.js:8"
             },
             "result": {
               "status": "passed",
-              "duration": 2194641900
+              "duration": 2152390599
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 25,
-            "name": "user opens the navigation menu and navigates to Aboutus page",
+            "line": 24,
+            "name": "User clicks on menu and click on Contact link",
             "match": {
-              "location": "features\\steps\\aboutUs.js:11"
+              "location": "features\\steps\\contactus.js:12"
             },
             "result": {
               "status": "passed",
-              "duration": 497161199
+              "duration": 533632699
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 26,
-            "name": "click on navigation menu link 2nd time",
+            "line": 25,
+            "name": "User click on submit button",
             "match": {
-              "location": "features\\steps\\aboutUs.js:17"
+              "location": "features\\steps\\contactus.js:26"
             },
             "result": {
               "status": "passed",
-              "duration": 464208700
+              "duration": 510633300
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 27,
-            "name": "about us link should be display with '/ About' menuitem",
+            "line": 26,
+            "name": "success message should be visible",
             "match": {
-              "location": "features\\steps\\aboutUs.js:41"
+              "location": "features\\steps\\contactus.js:98"
             },
             "result": {
-              "status": "passed",
-              "duration": 26011799
+              "status": "failed",
+              "duration": 5008903400,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('//p[text()=\\'Invalid form.\\']')\nExpected string: \u001b[32m\"Thanks for contacting us!\"\u001b[39m\nReceived: <element(s) not found>\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"to.have.text\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//p[text()=\\'Invalid form.\\']')\u001b[22m\n\n    at Proxy.<anonymous> (D:\\githubclonerepo\\PlaywrightBDD\\Playwright-bdd-js\\node_modules\\playwright\\lib\\matchers\\expect.js:221:24)\n    at ContactPage.verifySuccessMessage (D:\\githubclonerepo\\PlaywrightBDD\\Playwright-bdd-js\\pages\\ContactPage.js:100:68)\n    at async World.<anonymous> (D:\\githubclonerepo\\PlaywrightBDD\\Playwright-bdd-js\\features\\steps\\contactus.js:99:3)"
             }
           },
           {
@@ -338,7 +365,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 4647299
+              "duration": 72134299
             }
           }
         ],
@@ -347,56 +374,56 @@
       },
       {
         "description": "",
-        "id": "aboutus-feature;verify-aboutus-page-menu-item-links",
+        "id": "contact-us-feature;verify-send-message-hover-action",
         "keyword": "Scenario",
-        "line": 28,
-        "name": "Verify Aboutus page Menu Item Links",
+        "line": 27,
+        "name": "Verify Send message Hover Action",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 62734200
+              "duration": 68721400
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 29,
-            "name": "user on to the home page for about us",
+            "line": 28,
+            "name": "user on to the home page for contact page",
             "match": {
-              "location": "features\\steps\\aboutUs.js:7"
+              "location": "features\\steps\\contactus.js:8"
             },
             "result": {
               "status": "passed",
-              "duration": 3848066500
+              "duration": 1942500900
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 30,
-            "name": "user opens the navigation menu and navigates to Aboutus page",
+            "line": 29,
+            "name": "User clicks on menu and click on Contact link",
             "match": {
-              "location": "features\\steps\\aboutUs.js:11"
+              "location": "features\\steps\\contactus.js:12"
             },
             "result": {
               "status": "passed",
-              "duration": 499683299
+              "duration": 573038300
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 31,
-            "name": "there are '10' link should be displayed.",
+            "line": 30,
+            "name": "User should see the send message button hover in orange color",
             "match": {
-              "location": "features\\steps\\aboutUs.js:47"
+              "location": "features\\steps\\contactus.js:50"
             },
             "result": {
               "status": "passed",
-              "duration": 188698399
+              "duration": 603573199
             }
           },
           {
@@ -404,7 +431,614 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 7117499
+              "duration": 7871499
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "contact-us-feature;verify-underline-text-for-touch-text",
+        "keyword": "Scenario",
+        "line": 31,
+        "name": "Verify Underline Text for Touch text",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 97837500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 32,
+            "name": "user on to the home page for contact page",
+            "match": {
+              "location": "features\\steps\\contactus.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2238428099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 33,
+            "name": "User clicks on menu and click on Contact link",
+            "match": {
+              "location": "features\\steps\\contactus.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 580071199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 34,
+            "name": "Underline should be display within Touch Text",
+            "match": {
+              "location": "features\\steps\\contactus.js:77"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 535376800
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 5120200
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "contact-us-feature;verify-contact-us-page-heading",
+        "keyword": "Scenario",
+        "line": 35,
+        "name": "Verify Contact us page heading",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 132211299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 36,
+            "name": "user on to the home page for contact page",
+            "match": {
+              "location": "features\\steps\\contactus.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2207982999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 37,
+            "name": "User clicks on menu and click on Contact link",
+            "match": {
+              "location": "features\\steps\\contactus.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 508902999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 38,
+            "name": "Contact page heading should be display",
+            "match": {
+              "location": "features\\steps\\contactus.js:80"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 34935300
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 7114100
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "contact-us-feature;verify-contact-us-page-sub-heading",
+        "keyword": "Scenario",
+        "line": 39,
+        "name": "Verify Contact us page sub heading",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 65515199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 40,
+            "name": "user on to the home page for contact page",
+            "match": {
+              "location": "features\\steps\\contactus.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2248580000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 41,
+            "name": "User clicks on menu and click on Contact link",
+            "match": {
+              "location": "features\\steps\\contactus.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 518800099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 42,
+            "name": "Contact page additional heading should be display",
+            "match": {
+              "location": "features\\steps\\contactus.js:83"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 40110400
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 5995099
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "contact-us-feature;verify-invalid-email-message",
+        "keyword": "Scenario",
+        "line": 43,
+        "name": "Verify Invalid email Message",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 62994100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 44,
+            "name": "user on to the home page for contact page",
+            "match": {
+              "location": "features\\steps\\contactus.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2131885600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 45,
+            "name": "User clicks on menu and click on Contact link",
+            "match": {
+              "location": "features\\steps\\contactus.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 482101799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 46,
+            "name": "User fill form with invalid email",
+            "match": {
+              "location": "features\\steps\\contactus.js:86"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 565512400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 47,
+            "name": "Invalid email validation message should be display",
+            "match": {
+              "location": "features\\steps\\contactus.js:89"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4916800
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 4436500
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "contact-us-feature;verify-contact-information",
+        "keyword": "Scenario",
+        "line": 48,
+        "name": "Verify Contact information",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 68704499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 49,
+            "name": "user on to the home page for contact page",
+            "match": {
+              "location": "features\\steps\\contactus.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2064606700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 50,
+            "name": "User clicks on menu and click on Contact link",
+            "match": {
+              "location": "features\\steps\\contactus.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 504492599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 51,
+            "name": "Contact Details should be visible",
+            "match": {
+              "location": "features\\steps\\contactus.js:92"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 160601500
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 5465199
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "contact-us-feature;verify-background-image",
+        "keyword": "Scenario",
+        "line": 52,
+        "name": "Verify Background image",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 69691399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 53,
+            "name": "user on to the home page for contact page",
+            "match": {
+              "location": "features\\steps\\contactus.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2026123099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 54,
+            "name": "User clicks on menu and click on Contact link",
+            "match": {
+              "location": "features\\steps\\contactus.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 483142399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 55,
+            "name": "Verify Background Image URL",
+            "match": {
+              "location": "features\\steps\\contactus.js:95"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 142884900
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 3886500
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "contact-us-feature;verify-heading-font-size",
+        "keyword": "Scenario",
+        "line": 56,
+        "name": "Verify Heading font size",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 69353199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 57,
+            "name": "user on to the home page for contact page",
+            "match": {
+              "location": "features\\steps\\contactus.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2049243400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 58,
+            "name": "User clicks on menu and click on Contact link",
+            "match": {
+              "location": "features\\steps\\contactus.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 489981399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 59,
+            "name": "User should see the page heading font size as '80px' in contact page",
+            "match": {
+              "location": "features\\steps\\contactus.js:63"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 50112800
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 5379900
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "contact-us-feature;verify-additional-heading-font-size",
+        "keyword": "Scenario",
+        "line": 60,
+        "name": "Verify Additional Heading font size",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 60049899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 61,
+            "name": "user on to the home page for contact page",
+            "match": {
+              "location": "features\\steps\\contactus.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2138855099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 62,
+            "name": "User clicks on menu and click on Contact link",
+            "match": {
+              "location": "features\\steps\\contactus.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 497281800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 63,
+            "name": "User should see the page additional heading font size as '160px' in contact page",
+            "match": {
+              "location": "features\\steps\\contactus.js:70"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 68686800
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 5628100
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "contact-us-feature;verify-contact-additional-page-title",
+        "keyword": "Scenario",
+        "line": 64,
+        "name": "Verify Contact Additional Page Title",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 89358999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 65,
+            "name": "user on to the home page for contact page",
+            "match": {
+              "location": "features\\steps\\contactus.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2308944700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 66,
+            "name": "User clicks on menu and click on Contact link",
+            "match": {
+              "location": "features\\steps\\contactus.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 501986400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 67,
+            "name": "User should see the Additional page Title as 'Contact' in contact page",
+            "match": {
+              "location": "features\\steps\\contactus.js:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 37232800
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 7752999
             }
           }
         ],
@@ -412,11 +1046,11 @@
         "type": "scenario"
       }
     ],
-    "id": "aboutus-feature",
+    "id": "contact-us-feature",
     "line": 1,
     "keyword": "Feature",
-    "name": "aboutus Feature",
+    "name": "Contact Us Feature",
     "tags": [],
-    "uri": "features\\aboutus.feature"
+    "uri": "features\\contactus.feature"
   }
 ]

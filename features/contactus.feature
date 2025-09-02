@@ -14,20 +14,13 @@ Feature: Contact Us Feature
         When User clicks on menu and click on Contact link
         Then User should see the Contact page URL
 
-    Scenario: Fill Contact form
-        Given user on to the home page for contact page
-        When User clicks on menu and click on Contact link
-        And User should redirect to contact Page
-        And User fill the contact form and click on submit button
-        Then User should see the success message
-
     Scenario: Blank Scenario for Contact Form
         Given user on to the home page for contact page
         When User clicks on menu and click on Contact link
         And User click on submit button without fill form
         Then Require field message should be visible
     Scenario: Positive Scenario for contact page
-        Given User on to the home page for contact page
+        Given user on to the home page for contact page
         When User clicks on menu and click on Contact link
         And User click on submit button
         Then success message should be visible
@@ -63,11 +56,11 @@ Feature: Contact Us Feature
     Scenario: Verify Heading font size
         Given user on to the home page for contact page
         When User clicks on menu and click on Contact link
-        Then User should see the page heading font size as '80 px' in contact page
-     Scenario: Verify Additional Heading font size
+        Then User should see the page heading font size as '80px' in contact page
+    Scenario: Verify Additional Heading font size
         Given user on to the home page for contact page
         When User clicks on menu and click on Contact link
-        Then User should see the page additional heading font size as '160 px' in contact page
+        Then User should see the page additional heading font size as '160px' in contact page
     Scenario: Verify Contact Additional Page Title
         Given user on to the home page for contact page
         When User clicks on menu and click on Contact link

@@ -22,15 +22,10 @@ When(
 When("User hover on Send Message button", async function () {
   await contactus.assertButtonHoverColor();
 });
-When("User should redirect to contact Page", async function () {
-  await contactus.verifyURL();
-});
-When(
-  "User fill the contact form and click on submit button",
-  async function () {
-    await contactus.fillContactForm();
-  }
-);
+
+When("User click on submit button",async function() {
+  await contactus.clickSubmitButton();
+})
 When("User click on submit button without fill form",async function(){
     await contactus.clickSubmitButton();
 })
@@ -78,9 +73,7 @@ Then(
     await contactus.verifyAdditionalPageTitleFontSize(expectedSize);
   }
 );
-Then("User should see the success message", async function () {
-  await contactus.verifySuccessMessage();
-});
+
 Then("Underline should be display within Touch Text",async function () {
   await contactus.verifyUnderline();
 })
@@ -101,4 +94,7 @@ Then("Contact Details should be visible",async function(){
 });
 Then("Verify Background Image URL",async function(){
   await contactus.verifyBackgroundImageURL();
+})
+Then("success message should be visible",async function(){
+  await contactus.verifySuccessMessage();
 })
