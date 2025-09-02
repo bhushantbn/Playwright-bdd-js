@@ -35,7 +35,7 @@ Then("User should see the Courses page cards", async function () {
   await courses.verifyCards();
 });
 Then(
-  "User should see the Course button hover in orange color",
+  "User should hover on the Send Message button hover in orange color",
   async function () {
     await courses.verifyButtonHover();
   }

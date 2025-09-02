@@ -7,12 +7,12 @@ class BlogPage {
     this.blogLink = "//a[text()='Blog']";
     this.readMoreLinks = page.locator('//span[text()="Read More"]');
     this.heading = page.locator("h1.page-title");
-    this.headingAdditionalTitle=page.locator(".page-title-additional");
+    this.headingAdditionalTitle = page.locator(".page-title-additional");
   }
   async navigateToHomePage() {
     await this.page.goto("https://qaautomationlabs.com/");
   }
-   async verifyReadMoreLinks(expectedCount) {
+  async verifyReadMoreLinks(expectedCount) {
     await expect(this.readMoreLinks).toHaveCount(expectedCount);
   }
   async openNavigationMenu() {
@@ -23,34 +23,8 @@ class BlogPage {
   async navigateToblogPage() {
     await expect(this.page).toHaveTitle(/Blog/);
   }
-  async verifyblogHeading() {
-    const heading = this.page.locator("h2.technum-heading", {
-      hasText: "Kailash Pathak",
-    });
-    await expect(heading).toBeVisible();
-  }
   async verifyPageHeading(expectedText) {
-  
     await expect(this.heading).toHaveText(expectedText);
-  }
-
-  async verifyblogHeadingUnderline() {
-    // Locate the outer heading <h2>
-    const heading = this.page.locator("h2.technum-heading").first();
-    await expect(heading).toBeVisible();
-
-    // Locate the inner span containing 'Kailash Pathak', scoped to the heading
-    const underlineSpan = heading.locator("span >> text=Kailash Pathak");
-    await expect(underlineSpan).toBeVisible();
-  }
-  async verifyblogPageTitleUnderline() {
-    // Get the heading
-    const expectedText = "QAAutomationLabs";
-    const heading = this.page.locator("h2.technum-heading").nth(1);
-    await heading.scrollIntoViewIfNeeded();
-    console.log(await heading.textContent());
-    await expect(heading).toBeVisible();
-    await expect(heading).toHaveText(expectedText);
   }
   async clickOnblogLink() {
     await this.page.locator(this.openMenu).click();
@@ -76,19 +50,19 @@ class BlogPage {
       );
     }
   }
-  async verifyBlogPageCards(){
-    const blogCards  = this.page.locator(".blog-item");
+  async verifyBlogPageCards() {
+    const blogCards = this.page.locator(".blog-item");
     await expect(blogCards).toHaveCount(12); // or the expected number
   }
-  async verifyBlogURL(){
+  async verifyBlogURL() {
     await expect(this.page).toHaveURL(/blog/);
   }
-  async blogLinks() {
+  async blogLinks(count) {
     // wait for links to be available
-    await this.page.locator(".elementor-inner a").first().waitFor();
+    await this.page.locator(".content-inner a").first().waitFor();
 
     const totalLinks = this.page.locator(".elementor-inner a");
-    const count = await totalLinks.count();
+    count = await totalLinks.count();
 
     console.log(`...........Total links found: ${count}`);
 
@@ -101,11 +75,11 @@ class BlogPage {
 
     return count;
   }
-  async verifyblogPageBGColor(){
+  async verifyblogPageBGColor() {
     const blogPage = this.page.locator(".page-title-container");
-    await expect(blogPage).toHaveCSS("background-color","rgb(168, 59, 91)");
+    await expect(blogPage).toHaveCSS("background-color", "rgb(168, 59, 91)");
   }
-  async verifyAdditionalPageTitle(expectedText){
+  async verifyAdditionalPageTitle(expectedText) {
     await expect(this.page.locator("h1.page-title")).toHaveText(expectedText);
   }
   async verifyHeadingFontSize(expectedFontSize) {
@@ -116,6 +90,16 @@ class BlogPage {
       "font-size",
       `${expectedFontSize}`
     );
+  }
+  async verifyButtonHover() {
+    // Get all blogs buttons
+    const buttons = this.page
+      .locator("//a[@class='post-category-item']")
+      .nth(0);
+    await buttons.scrollIntoViewIfNeeded();
+    await this.page.waitForTimeout(3000); // allow hover CSS to apply
+    await buttons.hover();
+    await expect(buttons).toHaveCSS("background-color", "rgb(233, 162, 13)");
   }
 }
 

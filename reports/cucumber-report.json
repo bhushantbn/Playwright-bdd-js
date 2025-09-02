@@ -4,56 +4,56 @@
     "elements": [
       {
         "description": "",
-        "id": "blog-feature;verify-blog-page-title",
+        "id": "contact-us-feature;verify-background-image",
         "keyword": "Scenario",
-        "line": 3,
-        "name": "Verify blog page title",
+        "line": 59,
+        "name": "Verify Background image",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 278967999
+              "duration": 290222600
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 4,
-            "name": "user on to the home page for blog",
+            "line": 60,
+            "name": "user on to the home page for contact page",
             "match": {
-              "location": "features\\steps\\blogs.js:7"
+              "location": "features\\steps\\contactus.js:8"
             },
             "result": {
               "status": "passed",
-              "duration": 2623513000
+              "duration": 2147213399
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 5,
-            "name": "User clicks on menu and click on blog link",
+            "line": 61,
+            "name": "User clicks on menu and click on Contact link",
             "match": {
-              "location": "features\\steps\\blogs.js:11"
+              "location": "features\\steps\\contactus.js:12"
             },
             "result": {
               "status": "passed",
-              "duration": 633234299
+              "duration": 545136400
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 6,
-            "name": "User should see the blog page title",
+            "line": 62,
+            "name": "Verify Background Image URL",
             "match": {
-              "location": "features\\steps\\blogs.js:23"
+              "location": "features\\steps\\contactus.js:116"
             },
             "result": {
               "status": "passed",
-              "duration": 93792299
+              "duration": 51998199
             }
           },
           {
@@ -61,614 +61,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 140262799
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "blog-feature;verify-blog-page-url",
-        "keyword": "Scenario",
-        "line": 8,
-        "name": "Verify blog page URL",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 219404300
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 9,
-            "name": "user on to the home page for blog",
-            "match": {
-              "location": "features\\steps\\blogs.js:7"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2050695899
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 10,
-            "name": "User clicks on menu and click on blog link",
-            "match": {
-              "location": "features\\steps\\blogs.js:11"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 641586000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 11,
-            "name": "User should see the blog page URL",
-            "match": {
-              "location": "features\\steps\\blogs.js:26"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 94838000
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 87520299
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "blog-feature;verify-blog-page-menu-item-link",
-        "keyword": "Scenario",
-        "line": 12,
-        "name": "Verify blog page Menu Item Link",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 249765200
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 13,
-            "name": "user on to the home page for blog",
-            "match": {
-              "location": "features\\steps\\blogs.js:7"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2169579199
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 14,
-            "name": "User clicks on menu and click on blog link",
-            "match": {
-              "location": "features\\steps\\blogs.js:11"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 604127300
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 15,
-            "name": "click on navigation menu link 2nd time for blog link",
-            "match": {
-              "location": "features\\steps\\blogs.js:14"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 554692499
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 16,
-            "name": "blog link should be display with '/ blog' menuitem",
-            "match": {
-              "location": "features\\steps\\blogs.js:17"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 47621399
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 66595399
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "blog-feature;verify-blog-page-cards",
-        "keyword": "Scenario",
-        "line": 17,
-        "name": "Verify blog page cards",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 285900299
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 18,
-            "name": "user on to the home page for blog",
-            "match": {
-              "location": "features\\steps\\blogs.js:7"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1990089800
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 19,
-            "name": "User clicks on menu and click on blog link",
-            "match": {
-              "location": "features\\steps\\blogs.js:11"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 557044000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 20,
-            "name": "User should see the blog page cards",
-            "match": {
-              "location": "features\\steps\\blogs.js:29"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 155059700
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 86380600
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "blog-feature;verify-blog-read-more-links",
-        "keyword": "Scenario",
-        "line": 21,
-        "name": "Verify blog Read More Links",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 242266799
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 22,
-            "name": "user on to the home page for blog",
-            "match": {
-              "location": "features\\steps\\blogs.js:7"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2068874099
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 23,
-            "name": "User clicks on menu and click on blog link",
-            "match": {
-              "location": "features\\steps\\blogs.js:11"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 697772600
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 24,
-            "name": "User should see the Read More Links '12' times for blog page",
-            "match": {
-              "location": "features\\steps\\blogs.js:32"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 88394600
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 160786500
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "blog-feature;verify-blog-page-heading",
-        "keyword": "Scenario",
-        "line": 25,
-        "name": "Verify blog Page Heading",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 251105200
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 26,
-            "name": "user on to the home page for blog",
-            "match": {
-              "location": "features\\steps\\blogs.js:7"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2086810399
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 27,
-            "name": "User clicks on menu and click on blog link",
-            "match": {
-              "location": "features\\steps\\blogs.js:11"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 643640500
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 28,
-            "name": "User should see the page heading as 'Blog' in blog page",
-            "match": {
-              "location": "features\\steps\\blogs.js:45"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 108960199
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 98498400
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "blog-feature;verify-blog-page-background-color",
-        "keyword": "Scenario",
-        "line": 29,
-        "name": "Verify blog Page Background Color",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 229802299
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 30,
-            "name": "user on to the home page for blog",
-            "match": {
-              "location": "features\\steps\\blogs.js:7"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2429146999
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 31,
-            "name": "User clicks on menu and click on blog link",
-            "match": {
-              "location": "features\\steps\\blogs.js:11"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 557075199
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 32,
-            "name": "User should see the page background color",
-            "match": {
-              "location": "features\\steps\\blogs.js:51"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 93292700
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 90943499
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "blog-feature;verify-blog-additional-page-title",
-        "keyword": "Scenario",
-        "line": 33,
-        "name": "Verify blog Additional Page Title",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 220748099
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 34,
-            "name": "user on to the home page for blog",
-            "match": {
-              "location": "features\\steps\\blogs.js:7"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2752200299
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 35,
-            "name": "User clicks on menu and click on blog link",
-            "match": {
-              "location": "features\\steps\\blogs.js:11"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 565968700
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 36,
-            "name": "User should see the Additional page Title as 'Blog' in blog page",
-            "match": {
-              "location": "features\\steps\\blogs.js:54"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 63894199
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 94405199
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "blog-feature;verify-blog-heading-page-title-font-size",
-        "keyword": "Scenario",
-        "line": 37,
-        "name": "Verify blog heading Page Title font size",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 260117700
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 38,
-            "name": "user on to the home page for blog",
-            "match": {
-              "location": "features\\steps\\blogs.js:7"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2351005900
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 39,
-            "name": "User clicks on menu and click on blog link",
-            "match": {
-              "location": "features\\steps\\blogs.js:11"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 628631400
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 40,
-            "name": "User should see the page heading font size as '80px' in blog page",
-            "match": {
-              "location": "features\\steps\\blogs.js:57"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 130032000
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 85035500
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "blog-feature;verify-blog-additional-page-title-font-size",
-        "keyword": "Scenario",
-        "line": 41,
-        "name": "Verify blog Additional Page Title font size",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 233284499
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 42,
-            "name": "user on to the home page for blog",
-            "match": {
-              "location": "features\\steps\\blogs.js:7"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2423686600
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 43,
-            "name": "User clicks on menu and click on blog link",
-            "match": {
-              "location": "features\\steps\\blogs.js:11"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 571432699
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 44,
-            "name": "User should see the page Additional heading font size as '160px' in blog page",
-            "match": {
-              "location": "features\\steps\\blogs.js:60"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 148730100
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 79851800
+              "duration": 80173100
             }
           }
         ],
@@ -676,11 +69,11 @@
         "type": "scenario"
       }
     ],
-    "id": "blog-feature",
+    "id": "contact-us-feature",
     "line": 1,
     "keyword": "Feature",
-    "name": "Blog Feature",
+    "name": "Contact Us Feature",
     "tags": [],
-    "uri": "features\\blog.feature"
+    "uri": "features\\contactus.feature"
   }
 ]

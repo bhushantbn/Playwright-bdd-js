@@ -60,3 +60,12 @@ Then("User should see the page heading font size as {string} in blog page",async
 Then("User should see the page Additional heading font size as {string} in blog page",async function(expectedSize){
   await blog.verifyAdditionalPageTitleFontSize(expectedSize);
 });
+Then("User should see all the links of blog page",async function(){
+  await blog.blogLinks();
+});
+Then(
+  "User should see the button hover in orange color in blog page",
+  async function () {
+    await blog.verifyButtonHover();
+  }
+);

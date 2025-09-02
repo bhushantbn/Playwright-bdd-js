@@ -17,22 +17,21 @@ let browser;
 setDefaultTimeout(60 * 1000);
 
 BeforeAll(async () => {
-  const isCI = process.env.CI === "true"; // GitHub Actions sets CI=true
-
   // 🔑 Pick browser from environment variable, default is chromium
   const browserType = process.env.BROWSER || "chromium";
-  let browserInstance;
+  let browserInstance =
+    browserType === "firefox" ? firefox :
+    browserType === "webkit" ? webkit :
+    chromium;
 
-  if (browserType === "firefox") {
-    browserInstance = firefox;
-  } else if (browserType === "webkit") {
-    browserInstance = webkit;
-  } else {
-    browserInstance = chromium;
-  }
+  // Headless logic
+  const args = process.argv.join(" ");
+  const forceHeadless = args.includes("--headless");
+  const isCI = process.env.CI === "true";
+  const isHeadless = forceHeadless || process.env.HEADLESS === "true" || isCI;
 
   browser = await browserInstance.launch({
-    headless: isCI, // ✅ headless in CI, headed locally
+    headless: isHeadless,
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
   });
 });

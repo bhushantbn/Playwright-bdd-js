@@ -42,3 +42,11 @@ Feature: Blog Feature
         Given user on to the home page for blog
         When User clicks on menu and click on blog link
         Then User should see the page Additional heading font size as '160px' in blog page
+    Scenario: Verify blog page links
+        Given user on to the home page for blog
+        When User clicks on menu and click on blog link
+        Then User should see all the links of blog page
+    Scenario: Verify blog link hover
+        Given user on to the home page for blog
+        When User clicks on menu and click on blog link
+        Then User should see the button hover in orange color in blog page

@@ -7,6 +7,7 @@ module.exports = defineConfig({
   retries: 0,
   workers: 1,
 
+
   reporter: [
     ['list'],
     ['html', { outputFolder: 'playwright-report', open: 'never' }],
@@ -18,6 +19,7 @@ module.exports = defineConfig({
     ignoreHTTPSErrors: true,
     screenshot: 'only-on-failure',
     trace: 'on-first-retry',
+    launchOptions: { headless: true },
   },
 
   projects: [

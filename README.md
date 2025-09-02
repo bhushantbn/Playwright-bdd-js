@@ -58,18 +58,26 @@ Follow these steps to get the project up and running on your local machine.
 
 ---
 
-## 🏃‍♂️ Running Tests
+## 🏃‍♂️ Running Tests in headed mode in local environment
 
 To execute the BDD tests, run the following command from the root of the project:
 
 ```sh
-npm test
+npm run test
 ```
 
 This will trigger the Cucumber.js test runner, which will execute the scenarios defined in the `.feature` files.
 
 ---
 
+## 🏃‍♂️ Running Tests in headless mode
+
+```sh
+
+HEADLESS=true npm run test:contactus
+
+```
+---
 ## 📊 Viewing Reports
 
 After a test run is complete, two types of reports are generated:

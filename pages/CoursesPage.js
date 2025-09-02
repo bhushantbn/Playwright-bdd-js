@@ -13,7 +13,8 @@ class CoursesPage {
     this.readMoreLinks = page.locator('//span[text()="Read More"]');
     this.heading = page.locator("h1.page-title");
     this.pageBackground = page.locator("div.page-title-bg");
-    this.additionalHeading=page.locator(".page-title-additional")
+    this.additionalHeading=page.locator(".page-title-additional");
+    
   }
   async openNavigationMenu() {
     await this.page.locator(this.openMenu).click();

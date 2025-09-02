@@ -4,7 +4,6 @@ class LoginPage {
     this.emailInput = "#email";
     this.passwordInput = "#password";
     this.loginButton = "#loginBtn";
-    //this.successText = ".post-title"; // update selector if needed
     this.errorMessage = "#errorMsg";
     this.logoutButton = "#logoutBtn";
     this.emailError="#emailerror"; // Confirm selector in DevTools
