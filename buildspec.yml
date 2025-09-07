@@ -22,11 +22,13 @@ phases:
   build:
     commands:
       - echo "Running Playwright BDD Tests in headless mode..."
+      # Continue even if some tests fail
       - npx playwright test --reporter=html || true
       - echo "Ensuring reports directory exists..."
       - mkdir -p reports
       - echo "Running generate-report.js..."
       - ls -l reports
+      # If report generation fails, continue to post_build
       - node generate-report.js || echo "Report generation failed or JSON invalid, continuing..."
 
   post_build:
@@ -35,8 +37,7 @@ phases:
       - |
         REPORT_PATH="reports/cucumber-report.html"
         S3_BUCKET="my-playwright-reports"
-        # Replace colons with dashes in CODEBUILD_BUILD_ID to avoid S3 key issues
-        S3_KEY="${CODEBUILD_BUILD_ID//:/-}/cucumber-report.html"
+        S3_KEY="${CODEBUILD_BUILD_ID}/cucumber-report.html"
         if [ -f "$REPORT_PATH" ]; then
           aws s3 cp "$REPORT_PATH" "s3://$S3_BUCKET/$S3_KEY" || echo "S3 upload failed, check IAM permissions"
           REPORT_URL="https://$S3_BUCKET.s3.amazonaws.com/$S3_KEY"
