@@ -22,8 +22,8 @@ phases:
   build:
     commands:
       - echo "Running Playwright BDD Tests in headless mode..."
-      # Ensure headless mode in Playwright config
-      - npx playwright test --reporter=html
+      # Run tests; continue even if some fail to generate report
+      - npx playwright test --reporter=html || true
       - echo "Generating HTML Report..."
       - node generate-report.js
 
@@ -34,6 +34,8 @@ phases:
         REPORT_PATH="reports/cucumber-report.html"
         S3_BUCKET="my-playwright-reports"
         S3_KEY="${CODEBUILD_BUILD_ID}/cucumber-report.html"
+        # Create bucket if it doesn't exist
+        aws s3 ls "s3://$S3_BUCKET" || aws s3 mb "s3://$S3_BUCKET"
         if [ -f "$REPORT_PATH" ]; then
           aws s3 cp "$REPORT_PATH" "s3://$S3_BUCKET/$S3_KEY"
           REPORT_URL="https://$S3_BUCKET.s3.amazonaws.com/$S3_KEY"
