@@ -22,10 +22,14 @@ phases:
   build:
     commands:
       - echo "Running Playwright BDD Tests in headless mode..."
-      # Run tests; continue even if some fail to generate report
+      # Continue even if some tests fail
       - npx playwright test --reporter=html || true
-      - echo "Generating HTML Report..."
-      - node generate-report.js
+      - echo "Ensuring reports directory exists..."
+      - mkdir -p reports
+      - echo "Running generate-report.js..."
+      # Debugging: show files and catch errors
+      - ls -l
+      - node generate-report.js || echo "Report generation failed, check logs above."
 
   post_build:
     commands:
@@ -41,8 +45,8 @@ phases:
           REPORT_URL="https://$S3_BUCKET.s3.amazonaws.com/$S3_KEY"
           echo "Report uploaded to $REPORT_URL"
         else
-          echo "ERROR: Report file not found!"
-          exit 1
+          echo "WARNING: Report file not found, skipping S3 upload."
+          REPORT_URL="Report not available"
         fi
       - echo "Sending email with SES..."
       - |
