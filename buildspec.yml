@@ -1,0 +1,43 @@
+version: 0.2
+
+env:
+  secrets-manager:
+    SMTP_SERVER: "myapp/smtp:server"
+    SMTP_PORT: "myapp/smtp:port"
+    SMTP_USERNAME: "myapp/smtp:username"
+    SMTP_PASSWORD: "myapp/smtp:password"
+    TO_EMAIL: "myapp/email:to"
+    FROM_EMAIL: "myapp/email:from"
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 20
+    commands:
+      - echo Installing dependencies...
+      - npm ci
+      - npx playwright install --with-deps
+
+  build:
+    commands:
+      - echo Running Playwright BDD Tests...
+      - npm test
+      - echo Generating HTML Report...
+      - node generate-report.js
+
+  post_build:
+    commands:
+      - echo Uploading report to S3...
+      - aws s3 cp reports/cucumber-report.html s3://my-playwright-reports/${CODEBUILD_BUILD_ID}/
+      - echo Sending email with report...
+      - |
+        aws ses send-email \
+          --from "$FROM_EMAIL" \
+          --destination "ToAddresses=$TO_EMAIL" \
+          --message "Subject={Data=Playwright BDD Test Report - ${CODEBUILD_BUILD_ID}},Body={Text={Data=Report available at S3: https://s3.amazonaws.com/my-playwright-reports/${CODEBUILD_BUILD_ID}/cucumber-report.html}}"
+
+artifacts:
+  files:
+    - reports/cucumber-report.html
+  discard-paths: yes
+  base-directory: reports
