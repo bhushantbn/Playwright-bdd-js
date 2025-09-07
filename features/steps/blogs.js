@@ -37,12 +37,6 @@ Then(
 );
 
 Then(
-  "blog link should be display with {string} menuitem",
-  async function (expectedText) {
-    await blog.verifyMenu(expectedText);
-  }
-);
-Then(
   "User should see the page heading as {string} in blog page",
   async function (expectedText) {
     await blog.verifyPageHeading(expectedText);
