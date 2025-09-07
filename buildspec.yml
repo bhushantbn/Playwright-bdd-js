@@ -27,9 +27,9 @@ phases:
       - echo "Ensuring reports directory exists..."
       - mkdir -p reports
       - echo "Running generate-report.js..."
-      # Debugging: show files and catch errors
-      - ls -l
-      - node generate-report.js || echo "Report generation failed, check logs above."
+      - ls -l reports
+      # If report generation fails, continue to post_build
+      - node generate-report.js || echo "Report generation failed or JSON invalid, continuing..."
 
   post_build:
     commands:
@@ -39,7 +39,7 @@ phases:
         S3_BUCKET="my-playwright-reports"
         S3_KEY="${CODEBUILD_BUILD_ID}/cucumber-report.html"
         if [ -f "$REPORT_PATH" ]; then
-          aws s3 cp "$REPORT_PATH" "s3://$S3_BUCKET/$S3_KEY"
+          aws s3 cp "$REPORT_PATH" "s3://$S3_BUCKET/$S3_KEY" || echo "S3 upload failed, check IAM permissions"
           REPORT_URL="https://$S3_BUCKET.s3.amazonaws.com/$S3_KEY"
           echo "Report uploaded to $REPORT_URL"
         else
@@ -51,7 +51,7 @@ phases:
         aws ses send-email \
           --from "$FROM_EMAIL" \
           --destination "ToAddresses=$TO_EMAIL" \
-          --message "Subject={Data=Playwright BDD Test Report - ${CODEBUILD_BUILD_ID}},Body={Text={Data=Report available at $REPORT_URL}}"
+          --message "Subject={Data=Playwright BDD Test Report - ${CODEBUILD_BUILD_ID}},Body={Text={Data=Report available at $REPORT_URL}}" || echo "SES email failed, check IAM permissions and verified emails"
 
 artifacts:
   files:
