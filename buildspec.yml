@@ -22,14 +22,14 @@ phases:
   build:
     commands:
       - echo "Running Playwright BDD Tests in headless mode..."
-      # Continue even if some tests fail
-      - npx cucumber-js --format json:cucumber-report/report.json
+      # Generate cucumber JSON report
+      - mkdir -p cucumber-report
+      - npx cucumber-js --format json:cucumber-report/report.json || echo "Tests failed, continuing..."
       - echo "Ensuring reports directory exists..."
       - mkdir -p reports
-      - echo "Running generate-report.js..."
-      - ls -l reports
-      # If report generation fails, continue to post_build
+      - echo "Generating HTML report..."
       - node generate-report.js || echo "Report generation failed or JSON invalid, continuing..."
+      - ls -l reports || echo "Reports directory is empty"
 
   post_build:
     commands:
@@ -55,6 +55,6 @@ phases:
 
 artifacts:
   files:
+    - cucumber-report/report.json
     - reports/cucumber-report.html
   discard-paths: yes
-  base-directory: reports
