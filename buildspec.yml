@@ -17,11 +17,13 @@ phases:
       - echo "Installing dependencies..."
       - npm ci
       - npx playwright install --with-deps
+      - echo "Dependencies installed."
 
   build:
     commands:
-      - echo "Running Playwright BDD Tests..."
-      - npm test
+      - echo "Running Playwright BDD Tests in headless mode..."
+      # Ensure headless mode in Playwright config
+      - npx playwright test --reporter=html
       - echo "Generating HTML Report..."
       - node generate-report.js
 
