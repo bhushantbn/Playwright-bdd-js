@@ -23,7 +23,7 @@ phases:
     commands:
       - echo "Running Playwright BDD Tests in headless mode..."
       # Continue even if some tests fail
-       - npx cucumber-js --format json:cucumber-report/report.json
+      - npx cucumber-js --format json:cucumber-report/report.json
       - echo "Ensuring reports directory exists..."
       - mkdir -p reports
       - echo "Running generate-report.js..."
