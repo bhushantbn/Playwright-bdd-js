@@ -1,13 +1,15 @@
 version: 0.2
 
 env:
+  variables:
+    NODE_VERSION: "20"
   secrets-manager:
-    SMTP_SERVER: "myapp/smtp:server"
-    SMTP_PORT: "myapp/smtp:port"
-    SMTP_USERNAME: "myapp/smtp:username"
-    SMTP_PASSWORD: "myapp/smtp:password"
-    TO_EMAIL: "myapp/email:to"
-    FROM_EMAIL: "myapp/email:from"
+    SMTP_SERVER: "your-secret:SMTP_SERVER"
+    SMTP_PORT: "your-secret:SMTP_PORT"
+    SMTP_USERNAME: "your-secret:SMTP_USERNAME"
+    SMTP_PASSWORD: "your-secret:SMTP_PASSWORD"
+    TO_EMAIL: "your-secret:TO_EMAIL"
+    FROM_EMAIL: "your-secret:FROM_EMAIL"
 
 phases:
   install:
@@ -16,56 +18,37 @@ phases:
     commands:
       - echo "Installing dependencies..."
       - npm ci
+      - echo "Installing Playwright browsers..."
       - npx playwright install --with-deps
-      - echo "Dependencies installed."
 
   build:
     commands:
-      - echo "Running Playwright BDD Tests in headless mode..."
-      - mkdir -p cucumber-report
-      - ls -R features pages
-      # ✅ One-liner command, no backslashes, avoids mis-parsing
-      - npx cucumber-js "features/**/*.feature" --require "features/steps/**/*.js" --require "features/helpers/**/*.js" --require "pages/**/*.js" --format json:cucumber-report/report.json || echo "Tests failed, continuing..."
-      - echo "Generating HTML report..."
-      - mkdir -p reports
-      - node generate-report.js || echo "Report generation failed, continuing..."
-      - ls -l reports || echo "Reports directory is empty"
+      - echo "Running Playwright BDD Tests..."
+      - npm test
+      - echo "Generating HTML Report..."
+      - node generate-report.js
 
   post_build:
     commands:
-      - echo "Previewing HTML report in logs..."
-      - if [ -f reports/cucumber-report.html ]; then
-          echo "================ REPORT START ================";
-          cat reports/cucumber-report.html | head -n 200;
-          echo "================ REPORT END (truncated) ================";
-        else
-          echo "No report found to preview.";
-        fi
-      - echo "Uploading report to S3..."
+      - echo "Zipping HTML Report..."
+      - mkdir -p reports
+      - zip -r cucumber-report.zip reports/cucumber-report.html
+      - echo "Sending report via email..."
       - |
-        REPORT_PATH="reports/cucumber-report.html"
-        S3_BUCKET="my-playwright-reports"
-        S3_KEY="${CODEBUILD_BUILD_ID}/cucumber-report.html"
-        if [ -f "$REPORT_PATH" ]; then
-          echo "Found report file at: $REPORT_PATH"
-          aws s3 cp "$REPORT_PATH" "s3://$S3_BUCKET/$S3_KEY" || echo "S3 upload failed, check IAM permissions"
-          REPORT_URL="https://$S3_BUCKET.s3.amazonaws.com/$S3_KEY"
-          echo "Report uploaded to $REPORT_URL"
-        else
-          echo "WARNING: Report file not found at $REPORT_PATH, skipping S3 upload."
-          echo "Current directory contents:"
-          ls -la
-          REPORT_URL="Report not available"
-        fi
-      - echo "Sending email with SES..."
-      - |
-        aws ses send-email \
+        npm install -g nodemailer-cli
+        nodemailer \
+          --host $SMTP_SERVER \
+          --port $SMTP_PORT \
+          --secure false \
+          --auth-user $SMTP_USERNAME \
+          --auth-pass $SMTP_PASSWORD \
           --from "$FROM_EMAIL" \
-          --destination "ToAddresses=$TO_EMAIL" \
-          --message "Subject={Data=Playwright BDD Test Report - ${CODEBUILD_BUILD_ID}},Body={Text={Data=Report available at $REPORT_URL}}" || echo "SES email failed, check IAM permissions and verified emails"
+          --to "$TO_EMAIL" \
+          --subject "Playwright BDD Test Report - $CODEBUILD_BUILD_ID" \
+          --text "Please find the attached Playwright BDD HTML report for run ID $CODEBUILD_BUILD_ID." \
+          --attachments reports/cucumber-report.html
 
 artifacts:
   files:
-    - cucumber-report/report.json
     - reports/cucumber-report.html
   discard-paths: yes
