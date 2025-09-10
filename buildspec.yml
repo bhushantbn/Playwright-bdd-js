@@ -4,12 +4,12 @@ env:
   variables:
     NODE_VERSION: "20"
   secrets-manager:
-    SMTP_SERVER: "your-secret:SMTP_SERVER"
-    SMTP_PORT: "your-secret:SMTP_PORT"
-    SMTP_USERNAME: "your-secret:SMTP_USERNAME"
-    SMTP_PASSWORD: "your-secret:SMTP_PASSWORD"
-    TO_EMAIL: "your-secret:TO_EMAIL"
-    FROM_EMAIL: "your-secret:FROM_EMAIL"
+    SMTP_SERVER: "myapp/smtp:server"
+    SMTP_PORT: "myapp/smtp:port"
+    SMTP_USERNAME: "myapp/smtp:username"
+    SMTP_PASSWORD: "myapp/smtp:password"
+    TO_EMAIL: "myapp/email:to"
+    FROM_EMAIL: "myapp/email:from"
 
 phases:
   install:
