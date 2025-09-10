@@ -23,10 +23,11 @@ phases:
     commands:
       - echo "Running Playwright BDD Tests in headless mode..."
       - mkdir -p cucumber-report
-      - ls -R features pages   # ✅ updated, no `tests` folder
+      - ls -R features pages
       - npx cucumber-js "features/**/*.feature" \
         --require "features/steps/**/*.js" \
         --require "features/helpers/**/*.js" \
+        --require "pages/**/*.js" \
         --format json:cucumber-report/report.json || echo "Tests failed, continuing..."
       - echo "Generating HTML report..."
       - mkdir -p reports
