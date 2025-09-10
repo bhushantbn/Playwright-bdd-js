@@ -24,29 +24,22 @@ phases:
   build:
     commands:
       - echo "Running Playwright BDD Tests in headless mode..."
-      # ✅ force headless execution via environment variable
+      # ✅ force headless execution
       - HEADLESS=true npm test
       - echo "Generating HTML Report..."
       - node generate-report.js
 
   post_build:
     commands:
-      - echo "Preparing report for artifacts..."
+      - echo "Preparing report..."
       - mkdir -p reports
       - if [ ! -f reports/cucumber-report.html ]; then echo "Report missing!"; exit 1; fi
-      - echo "Sending report via email..."
-      - npm install -g nodemailer-cli
-      - nodemailer \
-          --host $SMTP_SERVER \
-          --port $SMTP_PORT \
-          --secure false \
-          --auth-user $SMTP_USERNAME \
-          --auth-pass $SMTP_PASSWORD \
-          --from "$FROM_EMAIL" \
-          --to "$TO_EMAIL" \
-          --subject "Playwright BDD Test Report - $CODEBUILD_BUILD_ID" \
-          --text "Please find the attached Playwright BDD HTML report for run ID $CODEBUILD_BUILD_ID." \
-          --attachments reports/cucumber-report.html
+
+      - echo "Installing Nodemailer..."
+      - npm install nodemailer@^6
+
+      - echo "Sending report via Nodemailer..."
+      - node send-email.js
 
 artifacts:
   files:
