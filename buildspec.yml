@@ -23,13 +23,14 @@ phases:
     commands:
       - echo "Running Playwright BDD Tests in headless mode..."
       - mkdir -p cucumber-report
+      - ls -R features tests # 👈 debug: check files exist
       - npx cucumber-js "features/**/*.feature" \
-        --require "tests/**/*.js" \
+        --require-module ts-node/register \
+        --require "tests/**/*.ts" \
         --format json:cucumber-report/report.json || echo "Tests failed, continuing..."
-      - echo "Ensuring reports directory exists..."
-      - mkdir -p reports
       - echo "Generating HTML report..."
-      - node generate-report.js || echo "Report generation failed or JSON invalid, continuing..."
+      - mkdir -p reports
+      - node generate-report.js || echo "Report generation failed, continuing..."
       - ls -l reports || echo "Reports directory is empty"
 
   post_build:
