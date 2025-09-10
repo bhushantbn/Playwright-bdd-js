@@ -22,9 +22,10 @@ phases:
   build:
     commands:
       - echo "Running Playwright BDD Tests in headless mode..."
-      # Generate cucumber JSON report
       - mkdir -p cucumber-report
-      - npx cucumber-js --format json:cucumber-report/report.json || echo "Tests failed, continuing..."
+      - npx cucumber-js "features/**/*.feature" \
+        --require "tests/**/*.js" \
+        --format json:cucumber-report/report.json || echo "Tests failed, continuing..."
       - echo "Ensuring reports directory exists..."
       - mkdir -p reports
       - echo "Generating HTML report..."
