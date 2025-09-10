@@ -38,12 +38,16 @@ phases:
         REPORT_PATH="reports/cucumber-report.html"
         S3_BUCKET="my-playwright-reports"
         S3_KEY="${CODEBUILD_BUILD_ID}/cucumber-report.html"
+        REPORT_PATH="reports/cucumber-report.html"  # Make sure this points to 
         if [ -f "$REPORT_PATH" ]; then
+          echo "Found report file at: $REPORT_PATH"
           aws s3 cp "$REPORT_PATH" "s3://$S3_BUCKET/$S3_KEY" || echo "S3 upload failed, check IAM permissions"
           REPORT_URL="https://$S3_BUCKET.s3.amazonaws.com/$S3_KEY"
           echo "Report uploaded to $REPORT_URL"
         else
-          echo "WARNING: Report file not found, skipping S3 upload."
+          echo "WARNING: Report file not found at $REPORT_PATH, skipping S3   upload."
+          echo "Current directory contents:"
+          ls -la
           REPORT_URL="Report not available"
         fi
       - echo "Sending email with SES..."

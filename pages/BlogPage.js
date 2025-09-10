@@ -17,7 +17,6 @@ class BlogPage {
   }
   async openNavigationMenu() {
     await this.page.locator(this.openMenu).click();
-    //await this.openMenu.scrollIntoViewIfNeeded();
     await this.page.locator(this.blogLink).first().click();
   }
   async navigateToblogPage() {
