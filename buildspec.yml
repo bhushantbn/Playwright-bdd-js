@@ -4,12 +4,12 @@ env:
   variables:
     NODE_VERSION: "20"
   secrets-manager:
-    SMTP_SERVER: "myapp/smtp:server"
-    SMTP_PORT: "myapp/smtp:port"
-    SMTP_USERNAME: "myapp/smtp:username"
-    SMTP_PASSWORD: "myapp/smtp:password"
-    TO_EMAIL: "myapp/email:to"
-    FROM_EMAIL: "myapp/email:from"
+    SMTP_SERVER: "your-secret:SMTP_SERVER"
+    SMTP_PORT: "your-secret:SMTP_PORT"
+    SMTP_USERNAME: "your-secret:SMTP_USERNAME"
+    SMTP_PASSWORD: "your-secret:SMTP_PASSWORD"
+    TO_EMAIL: "your-secret:TO_EMAIL"
+    FROM_EMAIL: "your-secret:FROM_EMAIL"
 
 phases:
   install:
@@ -23,20 +23,20 @@ phases:
 
   build:
     commands:
-      - echo "Running Playwright BDD Tests..."
-      - npm test
+      - echo "Running Playwright BDD Tests in headless mode..."
+      # ✅ force headless execution via environment variable
+      - HEADLESS=true npm test
       - echo "Generating HTML Report..."
       - node generate-report.js
 
   post_build:
     commands:
-      - echo "Zipping HTML Report..."
+      - echo "Preparing report for artifacts..."
       - mkdir -p reports
-      - zip -r cucumber-report.zip reports/cucumber-report.html
+      - if [ ! -f reports/cucumber-report.html ]; then echo "Report missing!"; exit 1; fi
       - echo "Sending report via email..."
-      - |
-        npm install -g nodemailer-cli
-        nodemailer \
+      - npm install -g nodemailer-cli
+      - nodemailer \
           --host $SMTP_SERVER \
           --port $SMTP_PORT \
           --secure false \
