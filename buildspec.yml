@@ -8,8 +8,8 @@ secrets-manager:
   SMTP_PORT: "myapp/smtp:port"
   SMTP_USERNAME: "myapp/smtp:username"
   SMTP_PASSWORD: "myapp/smtp:password"
-  TO_EMAIL: "myapp/email:to"
-  FROM_EMAIL: "myapp/email:from"
+  TO_EMAIL: "myapp/smtp:to"
+  FROM_EMAIL: "myapp/smtp:username"
 
 phases:
   install:
