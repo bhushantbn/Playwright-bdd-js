@@ -1,54 +1,20 @@
 version: 0.2
 
 env:
-  variables:
-    NODE_VERSION: "20"
-secrets-manager:
-  SMTP_SERVER: "myapp/smtp:server"
-  SMTP_PORT: "myapp/smtp:port"
-  SMTP_USERNAME: "myapp/smtp:username"
-  SMTP_PASSWORD: "myapp/smtp:password"
-  TO_EMAIL: "myapp/smtp:to"
-  FROM_EMAIL: "myapp/smtp:username"
+  secrets-manager:
+    SMTP_SERVER: "myapp/smtp:server"
+    SMTP_PORT: "myapp/smtp:port"
+    SMTP_USERNAME: "myapp/smtp:username"
+    SMTP_PASSWORD: "myapp/smtp:password"
+    EMAIL_RECEIVER: "myapp/smtp:to"
 
 phases:
-  install:
-    runtime-versions:
-      nodejs: 20
-    commands:
-      - echo "Installing dependencies..."
-      - npm ci
-      - echo "Installing Playwright browsers..."
-      - npx playwright install --with-deps
-
   build:
     commands:
-      - echo "Running Playwright BDD Tests in headless mode..."
-      - HEADLESS=true npm test
-      - echo "Generating HTML Report..."
-      - node generate-report.js
-
-  post_build:
-    commands:
-      - echo "Preparing report..."
-      - mkdir -p reports
-      - if [ ! -f reports/cucumber-report.html ]; then echo "Report missing!"; exit 1; fi
-
-      - echo "Installing Nodemailer..."
-      - npm install nodemailer@^6
-
-      - echo "Debugging environment variables (without password)..."
+      - echo "🔎 Debugging Secrets Manager values..."
       - echo "SMTP_SERVER=$SMTP_SERVER"
       - echo "SMTP_PORT=$SMTP_PORT"
       - echo "SMTP_USERNAME=$SMTP_USERNAME"
-      - echo "FROM_EMAIL=$FROM_EMAIL"
-      - echo "TO_EMAIL=$TO_EMAIL"
+      - echo "SMTP_PASSWORD=**** (hidden for safety)"
+      - echo "EMAIL_RECEIVER=$EMAIL_RECEIVER"
       - echo "CODEBUILD_BUILD_ID=$CODEBUILD_BUILD_ID"
-
-      - echo "Sending report via Nodemailer..."
-      - node send-email.js
-
-artifacts:
-  files:
-    - reports/cucumber-report.html
-  discard-paths: yes
